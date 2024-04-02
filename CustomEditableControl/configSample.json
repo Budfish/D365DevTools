@@ -1,7 +1,8 @@
 [
     {
         "code": "product",
-        "ruleTree": [
+        "listType": "whitelist",
+        "rulePath": [
             {
                 "nodeCode": "root",
                 "checker": "status",
@@ -10,7 +11,7 @@
                     {
                         "case": null,
                         "nextNode": "adminRoleCheck",
-                        "resul": null
+                        "includeControl": null
                     }
                 ]
             },
@@ -22,22 +23,22 @@
                     {
                         "case": "stageA",
                         "nextNode": "stageAChecker",
-                        "result": null
+                        "includeControl": null
                     },
                     {
                         "case": "stageB",
                         "nextNode": "stageBChecker",
-                        "result": null
+                        "includeControl": null
                     },
                     {
                         "case": "stageC",
                         "nextNode": "stageCChecker",
-                        "result": null
+                        "includeControl": null
                     },
                     {
                         "case": null,
                         "nextNode": null,
-                        "result": false
+                        "includeControl": false
                     }
                 ]
             },
@@ -47,17 +48,17 @@
                 "checkerType": "list",
                 "rules": [
                     {
-                        "list": [
+                        "case": [
                             "manager",
                             "admin"
                         ],
                         "nextNode": null,
-                        "result": true
+                        "includeControl": true
                     },
                     {
-                        "list": null,
+                        "case": null,
                         "nextNode": "switchStage",
-                        "result": null
+                        "includeControl": null
                     }
                 ]
             },
@@ -69,12 +70,12 @@
                     {
                         "case": "depA",
                         "nextNode": null,
-                        "result": true
+                        "includeControl": true
                     },
                     {
                         "list": null,
                         "nextNode": null,
-                        "result": false
+                        "includeControl": false
                     }
                 ]
             },
@@ -86,12 +87,12 @@
                     {
                         "case": "depB",
                         "nextNode": null,
-                        "result": true
+                        "includeControl": true
                     },
                     {
                         "list": null,
                         "nextNode": null,
-                        "result": false
+                        "includeControl": false
                     }
                 ]
             },
@@ -101,18 +102,18 @@
                 "checkerType": "list",
                 "rules": [
                     {
-                        "list": [
+                        "case": [
                             "depC",
                             "depD",
                             "depE"
                         ],
                         "nextNode": null,
-                        "result": true
+                        "includeControl": true
                     },
                     {
                         "list": null,
                         "nextNode": null,
-                        "result": false
+                        "includeControl": false
                     }
                 ]
             }
