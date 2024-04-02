@@ -1,13 +1,13 @@
-let EnvJson: Config[];
+let customEditableControl: Config[];
 
 class Config {
     // code: unique;
     code: string;
     listType: "blacklist" | "whitelist";
-    rulePath: RulePathNode[];
+    ruleNodes: RuleNode[];
 }
 
-class RulePathNode {
+class RuleNode {
     // nodeCode: exactly one RulePathNode shall named "root", shall be unique
     // checker: string for custom checker such as attribute, flag or user
     // rules: shall not mix different node rules

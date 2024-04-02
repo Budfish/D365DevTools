@@ -2,7 +2,7 @@
     {
         "code": "product",
         "listType": "whitelist",
-        "rulePath": [
+        "ruleNodes": [
             {
                 "nodeCode": "root",
                 "checker": "status",
