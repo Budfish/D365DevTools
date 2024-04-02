@@ -1,0 +1,121 @@
+[
+    {
+        "code": "product",
+        "ruleTree": [
+            {
+                "nodeCode": "root",
+                "checker": "status",
+                "checkerType": "switch",
+                "rules": [
+                    {
+                        "case": null,
+                        "nextNode": "adminRoleCheck",
+                        "resul": null
+                    }
+                ]
+            },
+            {
+                "nodeCode": "switchStage",
+                "checker": "bpfstage",
+                "checkerType": "switch",
+                "rules": [
+                    {
+                        "case": "stageA",
+                        "nextNode": "stageAChecker",
+                        "result": null
+                    },
+                    {
+                        "case": "stageB",
+                        "nextNode": "stageBChecker",
+                        "result": null
+                    },
+                    {
+                        "case": "stageC",
+                        "nextNode": "stageCChecker",
+                        "result": null
+                    },
+                    {
+                        "case": null,
+                        "nextNode": null,
+                        "result": false
+                    }
+                ]
+            },
+            {
+                "nodeCode": "adminRoleCheck",
+                "checker": "role",
+                "checkerType": "list",
+                "rules": [
+                    {
+                        "list": [
+                            "manager",
+                            "admin"
+                        ],
+                        "nextNode": null,
+                        "result": true
+                    },
+                    {
+                        "list": null,
+                        "nextNode": "switchStage",
+                        "result": null
+                    }
+                ]
+            },
+            {
+                "nodeCode": "stageAChecker",
+                "checker": "role",
+                "checkerType": "switch",
+                "rules": [
+                    {
+                        "case": "depA",
+                        "nextNode": null,
+                        "result": true
+                    },
+                    {
+                        "list": null,
+                        "nextNode": null,
+                        "result": false
+                    }
+                ]
+            },
+            {
+                "nodeCode": "stageBChecker",
+                "checker": "role",
+                "checkerType": "switch",
+                "rules": [
+                    {
+                        "case": "depB",
+                        "nextNode": null,
+                        "result": true
+                    },
+                    {
+                        "list": null,
+                        "nextNode": null,
+                        "result": false
+                    }
+                ]
+            },
+            {
+                "nodeCode": "stageCChecker",
+                "checker": "role",
+                "checkerType": "list",
+                "rules": [
+                    {
+                        "list": [
+                            "depC",
+                            "depD",
+                            "depE"
+                        ],
+                        "nextNode": null,
+                        "result": true
+                    },
+                    {
+                        "list": null,
+                        "nextNode": null,
+                        "result": false
+                    }
+                ]
+            }
+        ]
+    }
+]
