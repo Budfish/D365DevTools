@@ -5,10 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CustomControlAccessEditor</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+    </style>
 </head>
 
-<body>
+<body onload="registerFormContextOnload()">
 
 </body>
+<script>
+    function registerFormContextOnload() {
+        Object.defineProperty(window, "formContext", {
+            set: function (val) {
+                window.getFormContext = () => val;
+                init();
+            }
+        })
+    }
+    function init() {
+        // todo
+    }
+</script>
 
 </html>
