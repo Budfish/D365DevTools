@@ -5,15 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CustomControlAccessEditor</title>
-    <style>
-        body {
-            background-color: aquamarine;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="./art_CustomControlAccessEditorStyle" />
 </head>
 
-<body onload="registerFormContextOnload()">
-
+<body class="cca_packer" onload="registerFormContextOnload()">
+    <div class="cca_ruleNode cca_card">
+        <div class="cca_head cca_row">
+            <div>heading</div>
+            <div>tools</div>
+        </div>
+        <div class="cca_body">
+            <div class="cca_row">
+                <div class="cca_label"><span>code</span></div>
+                <div class="cca_fill"><input type="text"></div>
+            </div>
+            <div class="cca_row">
+                <div class="cca_label"><span>checker</span></div>
+                <div class="cca_fill"><input type="text">
+                </div>
+            </div>
+            <div>
+                <div class="cca_label"><span>rules</span></div>
+                <div class="cca_packer">
+                    <div class="cca_rule cca_card">
+                        <div class="cca_head cca_row">
+                            <div>folder</div>
+                            <div>tools</div>
+                        </div>
+                        <div>
+                            <div class="cca_row">
+                                <div class="cca_label"><span>matches</span></div>
+                                <div class="cca_fullInput"><textarea rows="1" style="resize: vertical;"></textarea>
+                                </div>
+                            </div>
+                            <div class="cca_row">
+                                <div class="cca_label"><span>includes</span></div>
+                                <div class="cca_fullInput"><textarea rows="1" style="resize: vertical;"></textarea>
+                                </div>
+                            </div>
+                            <div class="cca_row">
+                                <div class="cca_label"><span>next node</span></div>
+                                <div class="cca_fullInput"><input type="text"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cca_adder"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cca_adder"></div>
 </body>
 <script>
     function registerFormContextOnload() {
@@ -25,16 +66,7 @@
         })
     }
     function init() {
-        console.log("window");
-        console.log(window);
-        console.log("window.formContext");
-        console.log(window.formContext);
-        console.log("formContext");
-        console.log(formContext);
-        console.log("window.getFormContext");
-        console.log(window.getFormContext);
-        console.log("window.getFormContext()");
-        console.log(window.getFormContext());
+        // todo
     }
 </script>
 

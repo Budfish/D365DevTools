@@ -84,6 +84,8 @@
       <RootComponent type="1" schemaName="art_jsonconfig" behavior="0" />
       <RootComponent type="61" schemaName="art_ArtCommon" behavior="0" />
       <RootComponent type="61" schemaName="art_CustomControlAccessEditor" behavior="0" />
+      <RootComponent type="61" schemaName="art_CustomControlAccessEditorLibrary" behavior="0" />
+      <RootComponent type="61" schemaName="art_CustomControlAccessEditorStyle" behavior="0" />
     </RootComponents>
     <MissingDependencies />
   </SolutionManifest>

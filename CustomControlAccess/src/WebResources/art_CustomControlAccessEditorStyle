@@ -1,0 +1,71 @@
+/* General */
+* {
+    font-size: 16px;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+}
+
+/* Custom Element */
+.cca_ruleNode {
+    background-color: rgb(200, 240, 250);
+}
+
+.cca_rule {
+    background-color: rgba(110, 210, 235);
+}
+
+/* Custom Bootstrap */
+.cca_packer {
+    padding: 5px;
+}
+
+.cca_card {
+    border-radius: 3px;
+
+    padding: 10px;
+    margin-bottom: 10px;
+
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .7);
+}
+
+.cca_label {
+    min-width: 100px;
+    width: 100px;
+}
+
+.cca_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.cca_fill {
+    flex: auto;
+}
+
+.cca_fullInput {
+    flex: auto;
+    display: flex;
+}
+
+.cca_fullInput>* {
+    flex: auto;
+}
+
+.cca_adder {
+    cursor: pointer;
+    height: 2rem;
+
+    opacity: 0;
+    background-color: rgba(128, 128, 128, .5);
+
+    transition: opacity;
+    transition-duration: 200ms;
+}
+
+.cca_adder:hover {
+    opacity: 1;
+}
