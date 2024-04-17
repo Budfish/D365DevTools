@@ -1,0 +1,14 @@
+var art = art || {};
+art.WebResource = {
+    requestSetupFormContext: function (executionContext, webResourceName) {
+        this.setupFormContext(executionContext, webResourceName);
+    },
+    setupFormContext: async function (executionContext, webResourceName) {
+        console.log("hello!");
+        const formContext = executionContext.getFormContext();
+        const webResource = formContext.getControl(webResourceName);
+        await webResource.getContentWindow().then(window => {
+            window.formContext = formContext;
+        })
+    }
+}

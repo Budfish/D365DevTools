@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{a7c4e7a2-c20a-453a-84f6-3339c47e14d2}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{ec012a4e-1941-48b0-8783-2f08260b04a6}" IsUserDefined="1" name="SettingTab">
+          <labels>
+            <label description="設定" languagecode="1028" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{b4e16c02-74c9-4852-a96d-babc6b8769e6}" name="Original" visible="false">
+                  <labels>
+                    <label description="一般" languagecode="1028" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{535e56e9-f8b6-44fa-b55c-932802b0f76d}">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                        <control id="art_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="art_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{affca390-1d07-4b4f-8385-8f57d7310220}">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="ConfigSec" id="f4a12b9d-7448-4f65-9c67-25b428942790" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="111" labelwidth="115">
+                  <labels>
+                    <label description="設定檔" languagecode="1028" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{1527e5c3-410b-4038-888f-409ab92fb600}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                        <control id="art_code" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="art_code" disabled="false" />
+                      </cell>
+                      <cell id="{d39c1554-ced7-a4eb-d37a-67aa37687bd2}" showlabel="false" colspan="2" auto="false" rowspan="9">
+                        <labels>
+                          <label description="Editor" languagecode="1028" />
+                        </labels>
+                        <control id="WebResource_Editor" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                          <parameters>
+                            <Url>art_CustomControlAccessEditor</Url>
+                            <PassParameters>false</PassParameters>
+                            <ShowOnMobileClient>false</ShowOnMobileClient>
+                            <Security>false</Security>
+                            <Scrolling>auto</Scrolling>
+                            <Border>true</Border>
+                            <WebResourceId>{93D28C63-94F1-EE11-904B-002248591D5E}</WebResourceId>
+                          </parameters>
+                        </control>
+                        <events>
+                          <event name="onload" application="false">
+                            <dependencies />
+                          </event>
+                        </events>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3f12e514-5186-406f-8abf-3a91fc7f6d48}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                        <control id="art_accesstype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="art_accesstype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a5e87679-b4e5-41c5-9f6b-f3831d406f92}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                        <control id="art_listtype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="art_listtype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{27d96308-f970-45cc-a367-bfc111091c5a}" locklevel="0" colspan="1" rowspan="10" showlabel="true">
+                        <labels>
+                          <label description="設定檔預覽" languagecode="1028" />
+                        </labels>
+                        <control id="art_json" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="art_json" disabled="false" uniqueid="{4268d1c0-0709-90ca-2443-b65aad01d75d}" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{512410e7-d478-4b2d-b8be-fd4880b8f080}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{cb2748e4-f65c-49ed-ba4e-4da22324f87a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+            </cell>
+            <cell id="{0dff0345-d96e-4545-af08-f12b3e31dff5}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+            </cell>
+            <cell id="{f8be0d7f-d000-4c4c-bc6b-0fc54e253722}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{3e7e49a9-8223-4169-af05-1e8ae7e95873}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{2474cc1f-592c-4c2a-9560-e6dc02357535}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+            </cell>
+            <cell id="{f474b1b9-c977-4ca2-86e7-04e3a0d7510e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+            </cell>
+            <cell id="{c3d11cb5-7463-40d5-8269-c2eaf8afec85}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <Navigation>
+        <NavBar />
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1028" Text="一般" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1028" Text="銷售" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1028" Text="服務" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1028" Text="行銷" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1028" Text="程序工作階段" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions />
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+      <formLibraries>
+        <Library name="art_ArtCommon" libraryUniqueId="{2636fc1f-7a5c-4c31-a922-722438852e04}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="art.WebResource.requestSetupFormContext" libraryName="art_ArtCommon" handlerUniqueId="{9bc3b1de-3e57-443c-9b6a-d74187e8d1b3}" enabled="true" parameters="&quot;WebResource_Editor&quot;" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="資訊" languagecode="1028" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="此實體的表單。" languagecode="1028" />
+    </Descriptions>
+  </systemform>
+</forms>
