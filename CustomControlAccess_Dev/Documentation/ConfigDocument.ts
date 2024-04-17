@@ -18,10 +18,10 @@ class RuleNode {
 }
 
 class NodeRule {
-    // case: string for "switch" checkerType; string[] for "list" checkerType; null for unmatched checker
+    // match: string for "switch" checkerType; string[] for "list" checkerType; null for unmatched checker
     // nextNode: set null to stop rule path
     // includeControl: "__all__" for all controls
-    case: string | string[] | null;
+    match: string | string[] | null;
     nextNode: string | null;
     includeControl: "__all__" | string[];
 }

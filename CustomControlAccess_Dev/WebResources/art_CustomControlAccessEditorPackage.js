@@ -1,4 +1,4 @@
-art = art || {};
-art.CustomControlAccess = {
+var art = art || {};
+art.CustomControlAccessEditor = {
 
 }
