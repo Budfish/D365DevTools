@@ -24,6 +24,9 @@ body {
     cursor: pointer;
     height: 2rem;
 
+    text-align: center;
+    line-height: 2rem;
+
     opacity: 0;
     background-color: rgba(128, 128, 128, .5);
 

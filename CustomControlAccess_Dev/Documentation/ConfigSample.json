@@ -4,116 +4,138 @@
         "listType": "whitelist",
         "ruleNodes": [
             {
-                "nodeCode": "root",
+                "code": "root",
                 "checker": "status",
-                "checkerType": "switch",
                 "rules": [
                     {
-                        "case": null,
+                        "matches": null,
                         "nextNode": "adminRoleCheck",
-                        "includeControl": null
+                        "includes": []
                     }
                 ]
             },
             {
-                "nodeCode": "switchStage",
+                "code": "switchStage",
                 "checker": "bpfstage",
-                "checkerType": "switch",
                 "rules": [
                     {
-                        "case": "stageA",
+                        "matches": [
+                            "stageA"
+                        ],
                         "nextNode": "stageAChecker",
-                        "includeControl": null
+                        "includes": [
+                            "config_001"
+                        ]
                     },
                     {
-                        "case": "stageB",
+                        "matches": [
+                            "stageB"
+                        ],
                         "nextNode": "stageBChecker",
-                        "includeControl": null
+                        "includes": [
+                            "config_002"
+                        ]
                     },
                     {
-                        "case": "stageC",
+                        "matches": [
+                            "stageC"
+                        ],
                         "nextNode": "stageCChecker",
-                        "includeControl": null
+                        "includes": [
+                            "config_003"
+                        ]
                     },
                     {
-                        "case": null,
+                        "matches": null,
                         "nextNode": null,
-                        "includeControl": false
+                        "includes": []
                     }
                 ]
             },
             {
-                "nodeCode": "adminRoleCheck",
+                "code": "adminRoleCheck",
                 "checker": "role",
-                "checkerType": "list",
                 "rules": [
                     {
-                        "case": [
+                        "matches": [
                             "manager",
                             "admin"
                         ],
                         "nextNode": null,
-                        "includeControl": true
+                        "includes": [
+                            "__all__"
+                        ]
                     },
                     {
-                        "case": null,
+                        "matches": null,
                         "nextNode": "switchStage",
-                        "includeControl": null
+                        "includes": []
                     }
                 ]
             },
             {
-                "nodeCode": "stageAChecker",
+                "code": "stageAChecker",
                 "checker": "role",
-                "checkerType": "switch",
                 "rules": [
                     {
-                        "case": "depA",
+                        "matches": [
+                            "depA"
+                        ],
                         "nextNode": null,
-                        "includeControl": true
+                        "includes": [
+                            "data_a01",
+                            "data_a02"
+                        ]
                     },
                     {
                         "list": null,
                         "nextNode": null,
-                        "includeControl": false
+                        "includes": []
                     }
                 ]
             },
             {
-                "nodeCode": "stageBChecker",
+                "code": "stageBChecker",
                 "checker": "role",
-                "checkerType": "switch",
                 "rules": [
                     {
-                        "case": "depB",
+                        "matches": [
+                            "depB"
+                        ],
                         "nextNode": null,
-                        "includeControl": true
+                        "includes": [
+                            "data_b01",
+                            "data_b02",
+                            "data_b03"
+                        ]
                     },
                     {
                         "list": null,
                         "nextNode": null,
-                        "includeControl": false
+                        "includes": []
                     }
                 ]
             },
             {
-                "nodeCode": "stageCChecker",
+                "code": "stageCChecker",
                 "checker": "role",
-                "checkerType": "list",
                 "rules": [
                     {
-                        "case": [
+                        "matches": [
                             "depC",
                             "depD",
                             "depE"
                         ],
                         "nextNode": null,
-                        "includeControl": true
+                        "includes": [
+                            "data_common01",
+                            "data_common_02"
+                        ]
                     },
                     {
                         "list": null,
                         "nextNode": null,
-                        "includeControl": false
+                        "includes": []
                     }
                 ]
             }

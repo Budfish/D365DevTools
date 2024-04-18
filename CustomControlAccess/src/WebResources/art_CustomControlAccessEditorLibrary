@@ -2,7 +2,12 @@ class RuleNode {
     index;
     parent;
     node;
-    constructor() {
+    constructor(input) {
+        const { formContext, obj } = input;
+        this.formContext = formContext;
+        this.code = obj?.code ?? "";
+        this.checker = obj?.checker ?? "";
+        this.rules = obj?.rules ?? [];
         this._constructDom();
     }
     _constructDom() {
@@ -28,7 +33,7 @@ class RuleNode {
 
             function getHeading() {
                 const node = document.createElement("div");
-                node.textContent = "heading";
+                node.textContent = self.code;
                 return node;
             }
             function getTools() {
@@ -82,6 +87,7 @@ class RuleNode {
                     function getInput() {
                         const node = document.createElement("input");
                         node.type = "text";
+                        node.value = self.code;
                         return node;
                     }
                 }
@@ -118,6 +124,7 @@ class RuleNode {
                     function getInput() {
                         const node = document.createElement("input");
                         node.type = "text";
+                        node.value = self.checker;
                         return node;
                     }
                 }
@@ -152,8 +159,8 @@ class RuleNode {
 
                     function getCards() {
                         const result = [];
-                        for (let i = 0; i < 3; i++) {
-                            const rule = new Rule();
+                        for (const obj of self.rules) {
+                            const rule = new Rule({ formContext: self.formContext, obj });
                             result.push(rule.node);
                         }
                         return result;
@@ -163,6 +170,7 @@ class RuleNode {
             function getAdder() {
                 const node = document.createElement("div");
                 node.classList.add("cca_adder");
+                node.textContent = "Add Rule";
                 return node;
             }
         }
@@ -172,7 +180,12 @@ class Rule {
     index;
     parent;
     node;
-    constructor() {
+    constructor(input) {
+        const { formContext, obj } = input;
+        this.formContext = formContext;
+        this.matches = obj?.matches ?? [];
+        this.includes = obj?.includes ?? [];
+        this.nextNode = obj?.nextNode ?? "";
         this._constructDom();
     }
     _constructDom() {
@@ -250,6 +263,7 @@ class Rule {
                         const node = document.createElement("textarea");
                         node.rows = "1";
                         node.style.resize = "vertical";
+                        node.value = self.matches;
                         return node;
                     }
                 }
@@ -287,6 +301,7 @@ class Rule {
                         const node = document.createElement("textarea");
                         node.rows = "1";
                         node.style.resize = "vertical";
+                        node.value = self.includes;
                         return node;
                     }
                 }
@@ -323,6 +338,7 @@ class Rule {
                     function getInput() {
                         const node = document.createElement("input");
                         node.type = "text";
+                        node.value = self.nextNode;
                         return node;
                     }
                 }

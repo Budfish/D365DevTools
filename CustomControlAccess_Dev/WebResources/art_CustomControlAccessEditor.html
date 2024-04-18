@@ -32,10 +32,10 @@
         })
     }
     function init() {
-        const formContext = window.getFormContext();
         constructDom();
     }
     function constructDom() {
+        const formContext = window.getFormContext();
         const container = document.getElementById("cca_container");
         const ruleNodes = getRuleNodes();
         const adder = getAdder();
@@ -45,15 +45,19 @@
 
         function getRuleNodes() {
             const list = [];
-            for (let i = 0; i < 5; i++) {
-                const rn = new RuleNode();
-                list.push(rn.node);
+            const json = formContext.getAttribute("art_json")?.getValue() ?? "{}";
+            const configObj = JSON.parse(json);
+            const ruleNodes = configObj.ruleNodes ?? [];
+            for (const obj of ruleNodes) {
+                const ruleNode = new RuleNode({ formContext, obj });
+                list.push(ruleNode.node);
             }
             return list;
         }
         function getAdder() {
             const node = document.createElement("div");
             node.classList.add("cca_adder");
+            node.textContent = "Add Node";
             return node;
         }
     }

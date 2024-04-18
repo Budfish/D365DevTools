@@ -8,20 +8,19 @@ class Config {
 }
 
 class RuleNode {
-    // nodeCode: exactly one RulePathNode shall named "root", shall be unique
+    // code: exactly one RulePathNode shall named "root", shall be unique
     // checker: string for custom checker such as attribute, flag or user
     // rules: shall not mix different node rules
-    nodeCode: "root" | string;
+    code: "root" | string;
     checker: "bpfstage" | "role" | "team" | "status" | string;
-    checkerType: "list" | "switch";
-    rules: NodeRule[];
+    rules: Rule[];
 }
 
-class NodeRule {
-    // match: string for "switch" checkerType; string[] for "list" checkerType; null for unmatched checker
+class Rule {
+    // matches: string[] for "list" checkerType; null for unmatched checker
+    // includes: "__all__" for all controls
     // nextNode: set null to stop rule path
-    // includeControl: "__all__" for all controls
-    match: string | string[] | null;
+    matches: string[] | null;
+    includes: string[];
     nextNode: string | null;
-    includeControl: "__all__" | string[];
 }
