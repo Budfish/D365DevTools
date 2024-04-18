@@ -37,7 +37,7 @@
                     </row>
                   </rows>
                 </section>
-                <section name="ConfigSec" id="f4a12b9d-7448-4f65-9c67-25b428942790" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="111" labelwidth="115">
+                <section name="ConfigSec" id="f4a12b9d-7448-4f65-9c67-25b428942790" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
                   <labels>
                     <label description="設定檔" languagecode="1028" />
                   </labels>
@@ -49,7 +49,7 @@
                         </labels>
                         <control id="art_code" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="art_code" disabled="false" />
                       </cell>
-                      <cell id="{d39c1554-ced7-a4eb-d37a-67aa37687bd2}" showlabel="false" colspan="2" auto="false" rowspan="9">
+                      <cell id="{d39c1554-ced7-a4eb-d37a-67aa37687bd2}" showlabel="false" colspan="1" auto="false" rowspan="9">
                         <labels>
                           <label description="Editor" languagecode="1028" />
                         </labels>
@@ -60,7 +60,7 @@
                             <ShowOnMobileClient>false</ShowOnMobileClient>
                             <Security>false</Security>
                             <Scrolling>auto</Scrolling>
-                            <Border>true</Border>
+                            <Border>false</Border>
                             <WebResourceId>{93D28C63-94F1-EE11-904B-002248591D5E}</WebResourceId>
                           </parameters>
                         </control>
