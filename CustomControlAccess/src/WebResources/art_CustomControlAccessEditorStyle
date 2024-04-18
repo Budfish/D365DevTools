@@ -1,10 +1,14 @@
 /* General */
 * {
+    margin: 0;
+    padding: 0;
     font-size: 16px;
 }
 
 body {
-    background-color: rgb(240, 240, 240);
+    background-color: rgba(0, 0, 0, 0);
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 /* Custom Element */
@@ -14,6 +18,34 @@ body {
 
 .cca_rule {
     background-color: rgba(110, 210, 235);
+}
+
+.cca_adder {
+    cursor: pointer;
+    height: 2rem;
+
+    opacity: 0;
+    background-color: rgba(128, 128, 128, .5);
+
+    transition: opacity;
+    transition-duration: 200ms;
+}
+
+.cca_adder:hover {
+    opacity: 1;
+}
+
+.cca_cloud {
+    width: 100%;
+    height: 10px;
+
+    background-image: linear-gradient(180deg, white, rgba(0, 0, 0, 0));
+
+    position: fixed;
+}
+
+.cca_cloud.cca_upsidedown {
+    bottom: 0;
 }
 
 /* Custom Bootstrap */
@@ -55,17 +87,6 @@ body {
     flex: auto;
 }
 
-.cca_adder {
-    cursor: pointer;
-    height: 2rem;
-
-    opacity: 0;
-    background-color: rgba(128, 128, 128, .5);
-
-    transition: opacity;
-    transition-duration: 200ms;
-}
-
-.cca_adder:hover {
-    opacity: 1;
+.cca_upsidedown {
+    transform: scaleY(-1);
 }

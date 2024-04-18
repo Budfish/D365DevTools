@@ -10,28 +10,38 @@
 </head>
 
 <body onload="registerFormContextOnload()">
+    <div class="cca_cloud"></div>
+    <div id="cca_container"></div>
+    <div class="cca_cloud cca_upsidedown"></div>
 </body>
 <script>
-    constructDom();
-
     function registerFormContextOnload() {
+        window._formContextLoaded = false;
         Object.defineProperty(window, "formContext", {
             set: function (val) {
-                window.getFormContext = () => val;
+                this.getFormContext = () => val;
+                this.formContextLoaded = true;
+            }
+        })
+        Object.defineProperty(window, "formContextLoaded", {
+            set: function (val) {
+                if (this._formContextLoaded) return;
                 init();
+                this._formContextLoaded = true;
             }
         })
     }
     function init() {
+        const formContext = window.getFormContext();
         constructDom();
     }
     function constructDom() {
-        const body = document.body;
+        const container = document.getElementById("cca_container");
         const ruleNodes = getRuleNodes();
         const adder = getAdder();
-        body.classList.add("cca_packer");
-        for (let rn of ruleNodes) body.appendChild(rn);
-        body.appendChild(adder);
+        container.classList.add("cca_packer");
+        for (let rn of ruleNodes) container.appendChild(rn);
+        container.appendChild(adder);
 
         function getRuleNodes() {
             const list = [];
