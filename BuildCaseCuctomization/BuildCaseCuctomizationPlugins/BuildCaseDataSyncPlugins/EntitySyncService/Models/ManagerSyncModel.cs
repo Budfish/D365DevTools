@@ -21,7 +21,6 @@ namespace BuildCaseDataSyncPlugins.EntitySyncService.Models
             public string empCorpOrgID { get; set; }
             public string corpOrgName { get; set; }
             public string corpOrgIdSeq { get; set; }
-            public string statusMessage { get; set; }
             public string corpOrgNameSeq { get; set; }
         }
     }
