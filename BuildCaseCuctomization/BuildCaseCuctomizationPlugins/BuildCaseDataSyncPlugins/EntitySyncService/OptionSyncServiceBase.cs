@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BuildCaseDataSyncPlugins.EntitySyncService
 {
-    internal abstract class EntitySyncServiceBase
+    internal abstract class OptionSyncServiceBase
     {
         protected IOrganizationService service;
         protected IExecutionContext context;
@@ -19,18 +19,17 @@ namespace BuildCaseDataSyncPlugins.EntitySyncService
         protected abstract string syncApiPostBody { get; }
         protected abstract string entityLogicalName { get; }
         protected abstract string entityKeyName { get; }
-        protected abstract Type modelType { get; }
-        public EntitySyncServiceBase(IExecutionContext context, IOrganizationService service, ITracingService tracer)
+        public OptionSyncServiceBase(IExecutionContext context, IOrganizationService service, ITracingService tracer)
         {
             this.service = service;
             this.tracer = tracer;
             this.context = context;
         }
-        internal abstract bool CallApiGetData(out string resultStr);
-        internal abstract Entity ConvertD365EntityData<T>(T apiData);
-        internal void RetrieveDataAndSync<T>()
+        protected abstract Entity ConvertD365EntityData(object apiData);
+        protected abstract void DeserializeAndUpsert(string resultStr);
+        internal void RetrieveDataAndSync()
         {
-            bool apiSuccess = CallApiGetData(out string resultStr);
+            bool apiSuccess = CallApiGetResponse(out string resultStr);
             if(!apiSuccess)
             {
                 tracer.Trace("[Error] CallApiGetData fails.");
@@ -38,25 +37,28 @@ namespace BuildCaseDataSyncPlugins.EntitySyncService
                 return;
             }
 
-            T[] result;
-            try
-            {
-                result = JsonSerializer.Deserialize<T[]>(resultStr);
-            }
-            catch (Exception)
-            {
-                tracer.Trace("[Error] JsonDeserialize fails.");
-                tracer.Trace(resultStr);
-                return;
-            }
-
-            foreach (T item in result)
-            {
-                Entity entityData = ConvertD365EntityData(item);
-                UpsertRecord(entityData);
-            }
+            DeserializeAndUpsert(resultStr);
         }
-        private void UpsertRecord(Entity entity)
+        private bool CallApiGetResponse(out string resultStr)
+        {
+            OrganizationRequest request = new OrganizationRequest("art_CallBuildCaseApi");
+            request.Parameters.Add("Action", syncApiAction);
+            request.Parameters.Add("InputParamStr", syncApiPostBody);
+            OrganizationResponse response = service.Execute(request);
+
+            bool success = false;
+            resultStr = "ResultStr Not Set.";
+            if (response.Results.Contains("Success"))
+            {
+                success = response.Results["Success"].ToString().ToLower() == "true";
+            }
+            if (response.Results.Contains("ResultStr"))
+            {
+                resultStr = response.Results["ResultStr"].ToString();
+            }
+            return success;
+        }
+        protected void UpsertRecord(Entity entity)
         {
             QueryExpression query = new QueryExpression()
             {

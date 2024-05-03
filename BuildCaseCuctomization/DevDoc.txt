@@ -90,6 +90,13 @@ Solution (Adonis/Daniel)
             
         Output
             string Success
+            
+    Action - SyncBuildCaseOptionData
+        Input
+            string OptionCode
+            
+        Output
+            string Success
     
     Plugin Assembly - BuildCaseDataSyncPlugins
         Structure

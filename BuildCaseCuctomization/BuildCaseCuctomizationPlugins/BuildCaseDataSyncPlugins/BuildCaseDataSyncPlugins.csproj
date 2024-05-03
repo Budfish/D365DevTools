@@ -89,12 +89,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntitySyncService\EntitySyncServiceBase.cs" />
+    <Compile Include="EntitySyncService\OptionSyncServiceBase.cs" />
+    <Compile Include="EntitySyncService\OptionSyncServiceFacotry.cs" />
     <Compile Include="EntitySyncService\Models\CustomerSyncModel.cs" />
     <Compile Include="EntitySyncService\Models\ManagerSyncModel.cs" />
     <Compile Include="EntitySyncService\Models\OrganizationSyncModel.cs" />
+    <Compile Include="EntitySyncService\Services\AccountManagerSyncService.cs" />
     <Compile Include="EntitySyncService\Services\ManagerSyncService.cs" />
     <Compile Include="EntitySyncService\Services\OrganizationSyncService.cs" />
+    <Compile Include="EntitySyncService\Services\ProjectManagerSyncService.cs" />
     <Compile Include="Plugins\SyncBuildCaseDataPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

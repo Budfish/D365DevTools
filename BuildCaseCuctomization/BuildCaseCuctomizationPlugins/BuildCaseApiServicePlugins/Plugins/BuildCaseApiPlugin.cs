@@ -11,9 +11,9 @@ namespace BuildCaseApiServicePlugins.Plugins
 {
     public class BuildCaseApiPlugin : IPlugin
     {
-        protected IOrganizationService service;
-        protected IExecutionContext context;
-        protected ITracingService tracer;
+        private IOrganizationService service;
+        private IExecutionContext context;
+        private ITracingService tracer;
         public void Execute(IServiceProvider serviceProvider)
         {
             context = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
