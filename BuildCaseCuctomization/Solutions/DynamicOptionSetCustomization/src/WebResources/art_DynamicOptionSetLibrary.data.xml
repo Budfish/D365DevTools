@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{57bf9660-1b09-ef11-9f89-6045bd5b32a7}</WebResourceId>
+  <Name>art_DynamicOptionSetLibrary</Name>
+  <DisplayName>DynamicOptionSetLibrary</DisplayName>
+  <WebResourceType>3</WebResourceType>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/art_DynamicOptionSetLibrary57BF9660-1B09-EF11-9F89-6045BD5B32A7</FileName>
+</WebResource>
