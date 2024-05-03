@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntitySyncService\EntitySyncServiceBase.cs" />
+    <Compile Include="EntitySyncService\Models\CustomerSyncModel.cs" />
     <Compile Include="EntitySyncService\Models\ManagerSyncModel.cs" />
     <Compile Include="EntitySyncService\Models\OrganizationSyncModel.cs" />
     <Compile Include="EntitySyncService\Services\ManagerSyncService.cs" />
