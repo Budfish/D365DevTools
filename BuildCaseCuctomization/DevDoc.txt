@@ -68,7 +68,7 @@ Solution (Adonis/Daniel)
     BuildCaseDataSync
     /BuildCaseApiService
     
-    Table - 經理人(art_Manager)
+    Table - 經理人(systemuser)
         Field
         角色代碼(art_RoleType)
             SingleLine Text
@@ -77,7 +77,7 @@ Solution (Adonis/Daniel)
         員工姓名(art_EmpTwName)
             SingleLine Text
             
-    Table - 執行單位(art_Organization)
+    Table - 執行單位(account)
         Field
         組織代碼(art_CorpOrgId)
             SingleLine Text

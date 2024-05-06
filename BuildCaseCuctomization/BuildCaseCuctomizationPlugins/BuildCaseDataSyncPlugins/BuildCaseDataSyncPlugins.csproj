@@ -89,7 +89,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntitySyncService\OptionSyncServiceBase.cs" />
+    <Compile Include="EntitySyncService\DataSyncServiceBase.cs" />
     <Compile Include="EntitySyncService\OptionSyncServiceFacotry.cs" />
     <Compile Include="EntitySyncService\Models\CustomerSyncModel.cs" />
     <Compile Include="EntitySyncService\Models\ManagerSyncModel.cs" />

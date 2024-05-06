@@ -9,7 +9,7 @@ using static System.Collections.Specialized.BitVector32;
 
 namespace BuildCaseDataSyncPlugins.Plugins
 {
-    public class SyncBuildCaseDataPlugin : IPlugin
+    public class SyncBuildCaseOptionPlugin : IPlugin
     {
         private IOrganizationService service;
         private IExecutionContext context;
@@ -27,7 +27,7 @@ namespace BuildCaseDataSyncPlugins.Plugins
                 optionCode = context.InputParameters["OptionCode"].ToString();
             }
             OptionSyncServiceFacotry factory = new OptionSyncServiceFacotry(context, service, tracer);
-            OptionSyncServiceBase syncService = factory.GetService(optionCode);
+            DataSyncServiceBase syncService = factory.GetService(optionCode);
             syncService.RetrieveDataAndSync();
         }
     }

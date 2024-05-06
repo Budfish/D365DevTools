@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BuildCaseDataSyncPlugins.EntitySyncService
 {
-    internal abstract class OptionSyncServiceBase
+    internal abstract class DataSyncServiceBase
     {
         protected IOrganizationService service;
         protected IExecutionContext context;
@@ -19,7 +19,7 @@ namespace BuildCaseDataSyncPlugins.EntitySyncService
         protected abstract string syncApiPostBody { get; }
         protected abstract string entityLogicalName { get; }
         protected abstract string entityKeyName { get; }
-        public OptionSyncServiceBase(IExecutionContext context, IOrganizationService service, ITracingService tracer)
+        public DataSyncServiceBase(IExecutionContext context, IOrganizationService service, ITracingService tracer)
         {
             this.service = service;
             this.tracer = tracer;
@@ -27,7 +27,7 @@ namespace BuildCaseDataSyncPlugins.EntitySyncService
         }
         protected abstract Entity ConvertD365EntityData(object apiData);
         protected abstract void DeserializeAndUpsert(string resultStr);
-        internal void RetrieveDataAndSync()
+        internal virtual void RetrieveDataAndSync()
         {
             bool apiSuccess = CallApiGetResponse(out string resultStr);
             if(!apiSuccess)
@@ -39,7 +39,7 @@ namespace BuildCaseDataSyncPlugins.EntitySyncService
 
             DeserializeAndUpsert(resultStr);
         }
-        private bool CallApiGetResponse(out string resultStr)
+        protected bool CallApiGetResponse(out string resultStr)
         {
             OrganizationRequest request = new OrganizationRequest("art_CallBuildCaseApi");
             request.Parameters.Add("Action", syncApiAction);

@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace BuildCaseDataSyncPlugins.EntitySyncService.Services
 {
-    internal class ManagerSyncService : OptionSyncServiceBase
+    internal class ManagerSyncService : DataSyncServiceBase
     {
         protected virtual string roleType { get; }
         public ManagerSyncService(IExecutionContext context, IOrganizationService service, ITracingService tracer) : base(context, service, tracer) { }
-        protected override string syncApiAction => "GetManager";
-        protected override string syncApiPostBody => $"{{\"RoleType\":\"{roleType}\"}}";
+        protected override string syncApiAction => $"GetManager?RoleType={roleType}";
+        protected override string syncApiPostBody => $"";
         protected override string entityLogicalName => "art_Manager";
         protected override string entityKeyName => "art_EmpId";
         protected override Entity ConvertD365EntityData(object apiData)

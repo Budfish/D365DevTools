@@ -19,7 +19,7 @@ namespace BuildCaseDataSyncPlugins.EntitySyncService
             this.tracer = tracer;
             this.context = context;
         }
-        internal OptionSyncServiceBase GetService(string optionCode)
+        internal DataSyncServiceBase GetService(string optionCode)
         {
             switch(optionCode)
             {
@@ -29,7 +29,7 @@ namespace BuildCaseDataSyncPlugins.EntitySyncService
                     }
                 case "ProjectManager":
                     {
-                        return new AccountManagerSyncService(context, service, tracer);
+                        return new ProjectManagerSyncService(context, service, tracer);
                     }
                 case "Organization":
                     {
