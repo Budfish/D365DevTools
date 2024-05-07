@@ -1,9 +1,3 @@
-Solution
-    BuildCaseCustomization
-    
-    Table - 商機(opportunity)
-        Field
-
 Solution (Adonis)
     DynamicOptionSetCustomization
     /(Basic)
@@ -51,8 +45,11 @@ Solution (Adonis/Daniel)
             1. Assembly Structure
                 - Plugins
                     - BuildCaseApiPlugin.cs
-                - ApiServices
+                - Services
                     - ApiServiceBase.cs
+                - Models
+                    - AccessTokenResponseModel.cs
+                    - BuildCaseConnectionModel.cs
         
         Plugin - BuildCaseApiPlugin
             Step
@@ -83,6 +80,17 @@ Solution (Adonis/Daniel)
             SingleLine Text
         組織名稱(art_CorpOrgTwName)
             SingleLine Text
+            
+    WebResources - CallSyncBuildCaseOptionData
+        Function - 
+            Input
+                OptionCode
+            
+            Output
+                Success
+            
+            Logic
+                呼叫Action: SyncBuildCaseOptionData
     
     Action - SyncBuildCaseData
         Input
@@ -102,15 +110,19 @@ Solution (Adonis/Daniel)
         Structure
             1. Assembly Structure
                 - Plugins
-                    - SyncBuildCaseDataPlugin.cs
+                    - SyncBuildCaseOptionPlugin.cs
                 - EntitySyncService
-                    - EntitySyncServiceBase.cs
+                    - OptionSyncServiceFacotry.cs
+                    - DataSyncServiceBase.cs
                     - Services
                         - ManagerSyncService.cs
+                            - AccountManagerSyncService.cs
+                            - ProjectManagerSyncService.cs
                         - OrganizationSyncService.cs
                     - Models
                         - ManagerSyncModel.cs
                         - OrganizationSyncModel.cs
+                        - CustomerSyncModel.cs
                     
             2. abstract class EntitySyncServiceBase
                 abstract string syncApiAction;
@@ -118,9 +130,9 @@ Solution (Adonis/Daniel)
                 abstract Dictionary<string,string> fieldMap;
                 void UpsertRecords(EntityCollection);
         
-        Plugin - SyncBuildCaseDataPlugin
+        Plugin - SyncBuildCaseOptionPlugin
             Step    
-                Action: SyncBuildCaseData
+                Action: SyncBuildCaseOptionData
             
             Logic
                 1. 依照EntityLogicalName決定要call的API
@@ -130,20 +142,78 @@ Solution (Adonis/Daniel)
         
         
 Solution
-    BuildCaseOptionSetSync
-    /BuildCaseDataSync
+    BuildCaseOpptyUiCustomization
+    /BuildCaseDataSync, BuildCaseOpptyProduct
     
-    Action - SyncOption
-        Input
-            string OptionSetCode
-        
-        Output
-            string Success
-        
-    Plugin - UpdateOptionSetConfig
-        Step
-            Action: SyncOption
+    Table - 商機(Opportunity)
+        Form
+            拉欄位
+            拉產品成本Subgrid
+    
+    WebResource - OpportunityUiLibrary
+        Function - validateFields
+            Input
             
+            Output
+            
+            Logic
+                判斷欄位有沒有符合規則
+            
+        Function - UpdateOpptyProductCostRecords
+            Input
+            
+            OutPut
+            
+            Logic
+                在OnSave的時候執行
+                call Action: UpdateOpptyProductCostRecords
+                
+        
+Solution (Adonis)
+    BuildCaseOpptyProduct
+    /
+    
+    Table - 產品成本(art_OpptyProductCost)
+        Field
+        來源商機(art_Opportunity)
+            Lookup: Opportunity
+        
+        年度(art_Year)
+            SingleLine Text
+        
+        收入總額 (Y)(art_MainIncome)
+            Money
+        
+        商品成本 (Z)(art_MainProdCost)
+            Money
+        
+        收入總額 (AD)(art_SelfIncome)
+            Money
+        
+        自有產品成本 (AE)(art_SelfProdCost)
+            Money
+            
+        Band<x> (art_Band<x>), 其中<x>是1~9
+            Decimal
+        
+        View - 主力產品
+            年度(sort), 收入總額 (Y), 商品成本 (Z)
+        View - 自有產品
+            年度(sort), 收入總額 (AD), 自有產品成本 (AE)
+        
+    Action - UpdateOpptyProductCostRecords
+        Input
+            string OpportunityId
+            
+        Output
+            none
+        
+    Plugin Assembly - BuildCaseOpptyProductPlugins
+        Plugin - UpdateOpptyProductCostRecords
+        Step    
+            Action: UpdateOpptyProductCostRecords
+        
         Logic
-            1. 依照OptionSetCode決定更新的DynamicOptionSetConfig記錄
-            2. 
+            判斷執行起日, 執行乞日決定應該有多少art_OpptyProductCost
+            原來就存在的記錄保留
+            多餘的記錄刪除
