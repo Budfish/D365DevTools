@@ -15,7 +15,7 @@ namespace BuildCaseDataSyncPlugins.EntitySyncService.Services
         public ManagerSyncService(IExecutionContext context, IOrganizationService service, ITracingService tracer) : base(context, service, tracer) { }
         protected override string syncApiAction => $"GetManager?RoleType={roleType}";
         protected override string syncApiPostBody => $"";
-        protected override string entityLogicalName => "art_Manager";
+        protected override string entityLogicalName => "systemuser";
         protected override string entityKeyName => "art_EmpId";
         protected override Entity ConvertD365EntityData(object apiData)
         {

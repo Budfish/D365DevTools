@@ -98,7 +98,7 @@
     <Compile Include="EntitySyncService\Services\ManagerSyncService.cs" />
     <Compile Include="EntitySyncService\Services\OrganizationSyncService.cs" />
     <Compile Include="EntitySyncService\Services\ProjectManagerSyncService.cs" />
-    <Compile Include="Plugins\SyncBuildCaseDataPlugin.cs" />
+    <Compile Include="Plugins\SyncBuildCaseOptionPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

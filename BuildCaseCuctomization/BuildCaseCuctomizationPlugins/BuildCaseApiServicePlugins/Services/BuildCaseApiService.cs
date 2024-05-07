@@ -1,11 +1,14 @@
-﻿using Microsoft.Xrm.Sdk;
+﻿using BuildCaseApiServicePlugins.Models;
+using Microsoft.Xrm.Sdk;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
+using static System.Collections.Specialized.BitVector32;
 
 namespace BuildCaseApiServicePlugins.Services
 {
@@ -33,7 +36,52 @@ namespace BuildCaseApiServicePlugins.Services
         }
         private string GetAccessToken()
         {
-            return "";
+            string authUrl = "https://login.microsoftonline.com/54aa2fea-ecb3-4c71-80b3-de9a356e77c1/oauth2/v2.0/token";
+            try
+            {
+                try
+                {
+                    using (HttpClient client = new HttpClient())
+                    {
+                        client.Timeout = TimeSpan.FromMilliseconds(15000);
+                        client.DefaultRequestHeaders.ConnectionClose = true;
+
+                        HttpContent postBody = new FormUrlEncodedContent(new Dictionary<string, string>
+                        {
+                            ["grant_type"] = "grant_type",
+                            ["client_id"] = "client_id",
+                            ["client_secret"] = "client_secret",
+                            ["scope"] = "scope"
+                        });
+
+                        HttpResponseMessage response = client.PostAsync(authUrl, postBody).Result;
+                        response.EnsureSuccessStatusCode();
+
+                        string responseText = response.Content.ReadAsStringAsync().Result;
+                        AccessTokenResponseModel responseData = JsonSerializer.Deserialize<AccessTokenResponseModel>(responseText);
+                        return responseData.access_token;
+                    }
+                }
+                #region catch AggregateException
+                catch (AggregateException aex)
+                {
+                    tracer.Trace("Inner Exceptions:");
+                    foreach (Exception ex in aex.InnerExceptions)
+                    {
+                        tracer.Trace("  Exception: {0}", ex.ToString());
+                    }
+                    string errorMessage = string.Format(CultureInfo.InvariantCulture, "An exception occurred while attempting to issue the request.", aex);
+                    throw new InvalidPluginExecutionException(errorMessage);
+                }
+                #endregion
+            }
+            #region catch Exception
+            catch (Exception e)
+            {
+                tracer.Trace("Exception: {0}", e.ToString());
+            }
+            #endregion
+            throw new Exception($"取得Token失敗。");
         }
         private string GetApiRoute(string action)
         {
