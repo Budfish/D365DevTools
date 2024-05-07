@@ -7,7 +7,9 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls.WebParts;
 using static System.Collections.Specialized.BitVector32;
 
 namespace BuildCaseApiServicePlugins.Services
@@ -34,9 +36,19 @@ namespace BuildCaseApiServicePlugins.Services
             var value = response.Results["Value"];
             return value != null ? value.ToString() : "";
         }
+        private BuildCaseConnectionModel GetConnection()
+        {
+            var request = new OrganizationRequest("RetrieveEnvironmentVariableValue");
+            request.Parameters["DefinitionSchemaName"] = "art_BuildCaseConnection";
+            var response = service.Execute(request);
+            var value = response.Results["Value"];
+            string json = value != null ? value.ToString() : "{}";
+            var obj = JsonSerializer.Deserialize<BuildCaseConnectionModel>(json);
+            return obj;
+        }
         private string GetAccessToken()
         {
-            string authUrl = "https://login.microsoftonline.com/54aa2fea-ecb3-4c71-80b3-de9a356e77c1/oauth2/v2.0/token";
+            BuildCaseConnectionModel connection = GetConnection();
             try
             {
                 try
@@ -48,13 +60,13 @@ namespace BuildCaseApiServicePlugins.Services
 
                         HttpContent postBody = new FormUrlEncodedContent(new Dictionary<string, string>
                         {
-                            ["grant_type"] = "grant_type",
-                            ["client_id"] = "client_id",
-                            ["client_secret"] = "client_secret",
-                            ["scope"] = "scope"
+                            ["grant_type"] = connection.grant_type,
+                            ["client_id"] = connection.client_id,
+                            ["client_secret"] = connection.client_secret,
+                            ["scope"] = connection.scope,
                         });
 
-                        HttpResponseMessage response = client.PostAsync(authUrl, postBody).Result;
+                        HttpResponseMessage response = client.PostAsync(connection.authUrl, postBody).Result;
                         response.EnsureSuccessStatusCode();
 
                         string responseText = response.Content.ReadAsStringAsync().Result;
