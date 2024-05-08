@@ -48,8 +48,9 @@
           <IsLocalizable>0</IsLocalizable>
           <MinValue>-100000000000</MinValue>
           <MaxValue>100000000000</MaxValue>
+          <Accuracy>2</Accuracy>
           <displaynames>
-            <displayname description="Band1" languagecode="1028" />
+            <displayname description="Band 1：59,500" languagecode="1028" />
           </displaynames>
           <Descriptions>
             <Description description="" languagecode="1028" />
@@ -87,8 +88,9 @@
           <IsLocalizable>0</IsLocalizable>
           <MinValue>-100000000000</MinValue>
           <MaxValue>100000000000</MaxValue>
+          <Accuracy>2</Accuracy>
           <displaynames>
-            <displayname description="Band2" languagecode="1028" />
+            <displayname description="Band 2：68,500" languagecode="1028" />
           </displaynames>
           <Descriptions>
             <Description description="" languagecode="1028" />
@@ -126,8 +128,9 @@
           <IsLocalizable>0</IsLocalizable>
           <MinValue>-100000000000</MinValue>
           <MaxValue>100000000000</MaxValue>
+          <Accuracy>2</Accuracy>
           <displaynames>
-            <displayname description="Band3" languagecode="1028" />
+            <displayname description="Band 3：80,000" languagecode="1028" />
           </displaynames>
           <Descriptions>
             <Description description="" languagecode="1028" />
@@ -165,8 +168,9 @@
           <IsLocalizable>0</IsLocalizable>
           <MinValue>-100000000000</MinValue>
           <MaxValue>100000000000</MaxValue>
+          <Accuracy>2</Accuracy>
           <displaynames>
-            <displayname description="Band4" languagecode="1028" />
+            <displayname description="Band 4：89,700" languagecode="1028" />
           </displaynames>
           <Descriptions>
             <Description description="" languagecode="1028" />
@@ -204,8 +208,9 @@
           <IsLocalizable>0</IsLocalizable>
           <MinValue>-100000000000</MinValue>
           <MaxValue>100000000000</MaxValue>
+          <Accuracy>2</Accuracy>
           <displaynames>
-            <displayname description="Band5" languagecode="1028" />
+            <displayname description="Band 5：107,000" languagecode="1028" />
           </displaynames>
           <Descriptions>
             <Description description="" languagecode="1028" />
@@ -243,8 +248,9 @@
           <IsLocalizable>0</IsLocalizable>
           <MinValue>-100000000000</MinValue>
           <MaxValue>100000000000</MaxValue>
+          <Accuracy>2</Accuracy>
           <displaynames>
-            <displayname description="Band6" languagecode="1028" />
+            <displayname description="Band 6：130,000" languagecode="1028" />
           </displaynames>
           <Descriptions>
             <Description description="" languagecode="1028" />
@@ -282,8 +288,9 @@
           <IsLocalizable>0</IsLocalizable>
           <MinValue>-100000000000</MinValue>
           <MaxValue>100000000000</MaxValue>
+          <Accuracy>2</Accuracy>
           <displaynames>
-            <displayname description="Band7" languagecode="1028" />
+            <displayname description="Band 7：159,000" languagecode="1028" />
           </displaynames>
           <Descriptions>
             <Description description="" languagecode="1028" />
@@ -321,8 +328,9 @@
           <IsLocalizable>0</IsLocalizable>
           <MinValue>-100000000000</MinValue>
           <MaxValue>100000000000</MaxValue>
+          <Accuracy>2</Accuracy>
           <displaynames>
-            <displayname description="Band8" languagecode="1028" />
+            <displayname description="Band 8：195,000" languagecode="1028" />
           </displaynames>
           <Descriptions>
             <Description description="" languagecode="1028" />
@@ -360,11 +368,95 @@
           <IsLocalizable>0</IsLocalizable>
           <MinValue>-100000000000</MinValue>
           <MaxValue>100000000000</MaxValue>
+          <Accuracy>2</Accuracy>
           <displaynames>
-            <displayname description="Band9" languagecode="1028" />
+            <displayname description="Band 9：308,000" languagecode="1028" />
           </displaynames>
           <Descriptions>
             <Description description="" languagecode="1028" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="art_DirectCost">
+          <Type>money</Type>
+          <Name>art_directcost</Name>
+          <LogicalName>art_directcost</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <MinValue>-922337203685477</MinValue>
+          <MaxValue>922337203685477</MaxValue>
+          <Accuracy>2</Accuracy>
+          <AccuracySource>2</AccuracySource>
+          <displaynames>
+            <displayname description="直接成本 (人力成本+其他成本) (AL)" languagecode="1028" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1028" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="art_directcost_Base">
+          <Type>money</Type>
+          <Name>art_directcost_base</Name>
+          <LogicalName>art_directcost_base</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>disabled</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <MinValue>-922337203685477</MinValue>
+          <MaxValue>922337203685477</MaxValue>
+          <Accuracy>2</Accuracy>
+          <AccuracySource>2</AccuracySource>
+          <CalculationOf>art_DirectCost</CalculationOf>
+          <displaynames>
+            <displayname description="直接成本 (人力成本+其他成本) (AL) (基準貨幣)" languagecode="1028" />
+          </displaynames>
+          <Descriptions>
+            <Description description="基準貨幣中 直接成本 (人力成本+其他成本) (AL) 的值。" languagecode="1028" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="art_MainIncome">
@@ -533,6 +625,90 @@
             <Description description="基準貨幣中 商品成本 (Z) 的值。" languagecode="1028" />
           </Descriptions>
         </attribute>
+        <attribute PhysicalName="art_ManCost">
+          <Type>money</Type>
+          <Name>art_mancost</Name>
+          <LogicalName>art_mancost</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>1</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <MinValue>-922337203685477</MinValue>
+          <MaxValue>922337203685477</MaxValue>
+          <Accuracy>2</Accuracy>
+          <AccuracySource>2</AccuracySource>
+          <displaynames>
+            <displayname description="人力成本" languagecode="1028" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1028" />
+          </Descriptions>
+          <FormulaDefinitionFileName>/Formulas/art_opptyproductcost-art_mancost.xaml</FormulaDefinitionFileName>
+        </attribute>
+        <attribute PhysicalName="art_mancost_Base">
+          <Type>money</Type>
+          <Name>art_mancost_base</Name>
+          <LogicalName>art_mancost_base</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>disabled</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>1</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <MinValue>-922337203685477</MinValue>
+          <MaxValue>922337203685477</MaxValue>
+          <Accuracy>2</Accuracy>
+          <AccuracySource>2</AccuracySource>
+          <CalculationOf>art_ManCost</CalculationOf>
+          <displaynames>
+            <displayname description="人力成本 (基準貨幣)" languagecode="1028" />
+          </displaynames>
+          <Descriptions>
+            <Description description="基準貨幣中 人力成本 的值。" languagecode="1028" />
+          </Descriptions>
+        </attribute>
         <attribute PhysicalName="art_Name">
           <Type>nvarchar</Type>
           <Name>art_name</Name>
@@ -649,6 +825,90 @@
           </displaynames>
           <Descriptions>
             <Description description="實體執行個體的唯一識別碼" languagecode="1028" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="art_RuntimeServiceRevenue">
+          <Type>money</Type>
+          <Name>art_runtimeservicerevenue</Name>
+          <LogicalName>art_runtimeservicerevenue</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>1</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <MinValue>-922337203685477</MinValue>
+          <MaxValue>922337203685477</MaxValue>
+          <Accuracy>2</Accuracy>
+          <AccuracySource>2</AccuracySource>
+          <displaynames>
+            <displayname description="執行期服務收入" languagecode="1028" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1028" />
+          </Descriptions>
+          <FormulaDefinitionFileName>/Formulas/art_opptyproductcost-art_runtimeservicerevenue.xaml</FormulaDefinitionFileName>
+        </attribute>
+        <attribute PhysicalName="art_runtimeservicerevenue_Base">
+          <Type>money</Type>
+          <Name>art_runtimeservicerevenue_base</Name>
+          <LogicalName>art_runtimeservicerevenue_base</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>disabled</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>1</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <MinValue>-922337203685477</MinValue>
+          <MaxValue>922337203685477</MaxValue>
+          <Accuracy>2</Accuracy>
+          <AccuracySource>2</AccuracySource>
+          <CalculationOf>art_RuntimeServiceRevenue</CalculationOf>
+          <displaynames>
+            <displayname description="執行期服務收入 (基準貨幣)" languagecode="1028" />
+          </displaynames>
+          <Descriptions>
+            <Description description="基準貨幣中 執行期服務收入 的值。" languagecode="1028" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="art_SelfIncome">

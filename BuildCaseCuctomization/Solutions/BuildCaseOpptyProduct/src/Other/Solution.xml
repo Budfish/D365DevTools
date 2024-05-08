@@ -88,8 +88,32 @@
         <Dependent type="1" schemaName="opportunity" displayName="商機" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_runtimeservicerevenue" displayName="執行期服務收入" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_runtimeservicerevenue_base" displayName="執行期服務收入 (基準貨幣)" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="art_executionrate" displayName="執行期成本率" parentSchemaName="opportunity" parentDisplayName="商機" solution="Active" />
+        <Dependent type="2" schemaName="art_runtimeservicerevenue" displayName="執行期服務收入" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="art_executionrate" displayName="執行期成本率" parentSchemaName="opportunity" parentDisplayName="商機" solution="Active" />
+        <Dependent type="2" schemaName="art_runtimeservicerevenue_base" displayName="執行期服務收入 (基準貨幣)" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="2" schemaName="name" displayName="專案名稱" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
         <Dependent type="10" schemaName="art_opptyproductcost_Opportunity_opportunity" displayName="art_opptyproductcost_Opportunity_opportunity" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="opportunityid" displayName="商機" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_runtimeservicerevenue" displayName="執行期服務收入" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="opportunityid" displayName="商機" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_runtimeservicerevenue_base" displayName="執行期服務收入 (基準貨幣)" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" />
       </MissingDependency>
     </MissingDependencies>
   </SolutionManifest>

@@ -1,24 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <CustomActions>
-    <CustomAction Id="art.opportunity.UpdateAMButton.CustomAction" Location="Mscrm.HomepageGrid.opportunity.MainTab.Management.Controls._children" Sequence="6">
+    <CustomAction Id="art.opportunity.Button2.Button.CustomAction" Location="Mscrm.Form.opportunity.MainTab.Save.Controls._children" Sequence="46">
       <CommandUIDefinition>
-        <Button Command="art.opportunity.UpdateAMCommand" Id="art.opportunity.UpdateAMButton" LabelText="$LocLabels:art.opportunity.UpdateAMButton.LabelText" Sequence="6" TemplateAlias="o1" />
-      </CommandUIDefinition>
-    </CustomAction>
-    <CustomAction Id="art.opportunity.UpdateCustomerButton.CustomAction" Location="Mscrm.HomepageGrid.opportunity.MainTab.Management.Controls._children" Sequence="10">
-      <CommandUIDefinition>
-        <Button Command="art.opportunity.UpdateCustomerCommand" Id="art.opportunity.UpdateCustomerButton" LabelText="$LocLabels:art.opportunity.UpdateCustomerButton.LabelText" Sequence="10" TemplateAlias="o1" />
-      </CommandUIDefinition>
-    </CustomAction>
-    <CustomAction Id="art.opportunity.UpdateOrganizationButton.CustomAction" Location="Mscrm.HomepageGrid.opportunity.MainTab.Management.Controls._children" Sequence="9">
-      <CommandUIDefinition>
-        <Button Command="art.opportunity.UpdateOrganizationCommand" Id="art.opportunity.UpdateOrganizationButton" LabelText="$LocLabels:art.opportunity.UpdateOrganizationButton.LabelText" Sequence="9" TemplateAlias="o1" />
-      </CommandUIDefinition>
-    </CustomAction>
-    <CustomAction Id="art.opportunity.UpdatePMButton.CustomAction" Location="Mscrm.HomepageGrid.opportunity.MainTab.Management.Controls._children" Sequence="8">
-      <CommandUIDefinition>
-        <Button Command="art.opportunity.UpdatePMCommand" Id="art.opportunity.UpdatePMButton" LabelText="$LocLabels:art.opportunity.UpdatePMButton.LabelText" Sequence="8" TemplateAlias="o1" />
+        <SplitButton Command="Mscrm.Enabled" Id="art.opportunity.Button2.Button" LabelText="$LocLabels:art.opportunity.Button2.Button.LabelText" Sequence="46" TemplateAlias="o1">
+          <Menu Id="art.opportunity.Button2.Button.Menu">
+            <MenuSection Id="art.opportunity.Section3.Section" Title="$LocLabels:art.opportunity.Section3.Section.Title" Sequence="5" DisplayMode="Menu16">
+              <Controls Id="art.opportunity.Section3.Section.Controls">
+                <Button Command="art.opportunity.UpdateAMCommand" Id="art.opportunity.Button8.Button" LabelText="$LocLabels:art.opportunity.Button8.Button.LabelText" Sequence="6" />
+                <Button Command="art.opportunity.UpdatePMCommand" Id="art.opportunity.Button7.Button" LabelText="$LocLabels:art.opportunity.Button7.Button.LabelText" Sequence="6" />
+                <Button Command="art.opportunity.UpdateOrganizationCommand" Id="art.opportunity.Button6.Button" LabelText="$LocLabels:art.opportunity.Button6.Button.LabelText" Sequence="7" />
+                <Button Command="art.opportunity.UpdateIncomeSourceCommand" Id="art.opportunity.Button5.Button" LabelText="$LocLabels:art.opportunity.Button5.Button.LabelText" Sequence="8" />
+                <Button Command="art.opportunity.UpdateCustomerCommand" Id="art.opportunity.Button4.Button" LabelText="$LocLabels:art.opportunity.Button4.Button.LabelText" Sequence="10" />
+              </Controls>
+            </MenuSection>
+          </Menu>
+        </SplitButton>
       </CommandUIDefinition>
     </CustomAction>
   </CustomActions>
@@ -30,6 +27,7 @@
       <EnableRules />
       <DisplayRules />
       <Actions>
+        <JavaScriptFunction FunctionName="onScriptLoad" Library="$webresource:art_BuildCaseApiLibrary" />
         <JavaScriptFunction FunctionName="art.OpportunityRibbon.click" Library="$webresource:art_CallSyncBuildCaseOptionData">
           <StringParameter Value="AccountManager" />
         </JavaScriptFunction>
@@ -39,8 +37,19 @@
       <EnableRules />
       <DisplayRules />
       <Actions>
+        <JavaScriptFunction FunctionName="onScriptLoad" Library="$webresource:art_BuildCaseApiLibrary" />
         <JavaScriptFunction FunctionName="art.OpportunityRibbon.click" Library="$webresource:art_CallSyncBuildCaseOptionData">
           <StringParameter Value="Customer" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="art.opportunity.UpdateIncomeSourceCommand">
+      <EnableRules />
+      <DisplayRules />
+      <Actions>
+        <JavaScriptFunction FunctionName="onScriptLoad" Library="$webresource:art_BuildCaseApiLibrary" />
+        <JavaScriptFunction FunctionName="art.OpportunityRibbon.click" Library="$webresource:art_CallSyncBuildCaseOptionData">
+          <StringParameter Value="IncomeSource" />
         </JavaScriptFunction>
       </Actions>
     </CommandDefinition>
@@ -48,6 +57,7 @@
       <EnableRules />
       <DisplayRules />
       <Actions>
+        <JavaScriptFunction FunctionName="onScriptLoad" Library="$webresource:art_BuildCaseApiLibrary" />
         <JavaScriptFunction FunctionName="art.OpportunityRibbon.click" Library="$webresource:art_CallSyncBuildCaseOptionData">
           <StringParameter Value="Organization" />
         </JavaScriptFunction>
@@ -57,6 +67,7 @@
       <EnableRules />
       <DisplayRules />
       <Actions>
+        <JavaScriptFunction FunctionName="onScriptLoad" Library="$webresource:art_BuildCaseApiLibrary" />
         <JavaScriptFunction FunctionName="art.OpportunityRibbon.click" Library="$webresource:art_CallSyncBuildCaseOptionData">
           <StringParameter Value="ProjectManager" />
         </JavaScriptFunction>
@@ -69,24 +80,39 @@
     <EnableRules />
   </RuleDefinitions>
   <LocLabels>
-    <LocLabel Id="art.opportunity.UpdateAMButton.LabelText">
+    <LocLabel Id="art.opportunity.Button2.Button.LabelText">
       <Titles>
-        <Title description="Update AM" languagecode="1028" />
+        <Title description="更新選項" languagecode="1028" />
       </Titles>
     </LocLabel>
-    <LocLabel Id="art.opportunity.UpdateCustomerButton.LabelText">
+    <LocLabel Id="art.opportunity.Button4.Button.LabelText">
       <Titles>
-        <Title description="Update Customer" languagecode="1028" />
+        <Title description="簽約對象" languagecode="1028" />
       </Titles>
     </LocLabel>
-    <LocLabel Id="art.opportunity.UpdateOrganizationButton.LabelText">
+    <LocLabel Id="art.opportunity.Button5.Button.LabelText">
       <Titles>
-        <Title description="Update Organization" languagecode="1028" />
+        <Title description="業主名稱" languagecode="1028" />
       </Titles>
     </LocLabel>
-    <LocLabel Id="art.opportunity.UpdatePMButton.LabelText">
+    <LocLabel Id="art.opportunity.Button6.Button.LabelText">
       <Titles>
-        <Title description="Update PM" languagecode="1028" />
+        <Title description="專案執行單位" languagecode="1028" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="art.opportunity.Button7.Button.LabelText">
+      <Titles>
+        <Title description="專案經理" languagecode="1028" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="art.opportunity.Button8.Button.LabelText">
+      <Titles>
+        <Title description="業務經理" languagecode="1028" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="art.opportunity.Section3.Section.Title">
+      <Titles>
+        <Title description="項目" languagecode="1028" />
       </Titles>
     </LocLabel>
   </LocLabels>
