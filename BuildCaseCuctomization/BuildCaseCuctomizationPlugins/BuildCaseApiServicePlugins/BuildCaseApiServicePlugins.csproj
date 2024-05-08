@@ -92,6 +92,7 @@
     <Compile Include="Models\AccessTokenResponseModel.cs" />
     <Compile Include="Models\BuildCaseConnectionModel.cs" />
     <Compile Include="Plugins\BuildCaseApiPlugin.cs" />
+    <Compile Include="Plugins\BuildCaseTokenPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BuildCaseApiService.cs" />
   </ItemGroup>
