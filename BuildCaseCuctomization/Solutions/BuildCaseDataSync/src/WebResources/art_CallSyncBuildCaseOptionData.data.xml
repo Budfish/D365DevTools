@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{6a198d56-1e0c-ef11-9f8a-6045bd5880eb}</WebResourceId>
+  <Name>art_CallSyncBuildCaseOptionData</Name>
+  <DisplayName>CallSyncBuildCaseOptionData</DisplayName>
+  <LanguageCode>0</LanguageCode>
+  <WebResourceType>3</WebResourceType>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/art_CallSyncBuildCaseOptionData6A198D56-1E0C-EF11-9F8A-6045BD5880EB</FileName>
+</WebResource>

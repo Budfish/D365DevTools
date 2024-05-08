@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.24042.190" SolutionPackageVersion="9.2" languagecode="1028" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.24043.208" SolutionPackageVersion="9.2" languagecode="1028" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>BuildCaseDataSync</UniqueName>
     <LocalizedNames>
@@ -80,7 +80,10 @@
     <RootComponents>
       <RootComponent type="1" schemaName="art_manager" behavior="0" />
       <RootComponent type="1" schemaName="art_organization" behavior="0" />
+      <RootComponent type="1" schemaName="systemuser" behavior="2" />
       <RootComponent type="29" id="{74e92bdf-2209-ef11-9f89-6045bd5b32a7}" behavior="0" />
+      <RootComponent type="29" id="{acff9acc-960b-ef11-9f89-6045bd5b32a7}" behavior="0" />
+      <RootComponent type="61" schemaName="art_CallSyncBuildCaseOptionData" behavior="0" />
     </RootComponents>
     <MissingDependencies />
   </SolutionManifest>
