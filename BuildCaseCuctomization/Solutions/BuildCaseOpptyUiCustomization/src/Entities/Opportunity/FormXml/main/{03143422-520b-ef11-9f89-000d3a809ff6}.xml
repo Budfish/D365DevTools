@@ -12,7 +12,7 @@
         <data id="statecode" datafieldname="statecode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
       </hiddencontrols>
       <tabs>
-        <tab name="ProjectData" id="ef5c6347-761f-4ac2-897e-32ded7d6643e" IsUserDefined="0" locklevel="0" showlabel="true">
+        <tab name="ProjectData" id="ef5c6347-761f-4ac2-897e-32ded7d6643e" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
           <labels>
             <label description="專案資訊" languagecode="1028" />
           </labels>
@@ -31,18 +31,33 @@
                         </labels>
                         <control id="name" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="name" disabled="false" />
                       </cell>
-                      <cell locklevel="0" id="{c35c45a7-ea48-4883-a191-f58182c57e6e}" showlabel="false">
+                      <cell id="{d4b3643f-643a-46c7-be0b-3479c4465b11}">
                         <labels>
                           <label description="" languagecode="1028" />
                         </labels>
                       </cell>
                     </row>
                     <row>
-                      <cell id="{7ee6bade-c990-4ec4-817d-ef1348b5bbf3}" locklevel="0" colspan="4" rowspan="1" showlabel="true">
+                      <cell id="{d25ef0e0-a264-43b9-9057-3e1235a2ff27}" locklevel="0" colspan="1" rowspan="1">
                         <labels>
                           <label description="專案執行單位" languagecode="1028" />
                         </labels>
-                        <control id="art_projectexecutionunit" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="art_projectexecutionunit" disabled="false" uniqueid="{5cc2e124-2190-6d71-dc62-1ee46c1024ea}" />
+                        <control id="art_projectexecutionunit" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="art_projectexecutionunit" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{022dfbc8-86d2-4e10-bd16-5169073eac76}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{1e3267ce-cef4-4ee0-8d9e-19007e6c7290}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{3b7a0261-5c2c-4fab-b14c-45e9e111d0d1}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
                       </cell>
                     </row>
                   </rows>
@@ -53,20 +68,16 @@
                   </labels>
                   <rows>
                     <row>
-                      <cell id="{ba901146-2944-4df0-8565-6665e349ce3c}" locklevel="0" colspan="2" rowspan="1" showlabel="true">
+                      <cell id="{8beaaa80-e357-4207-93de-8a9f40962b6e}" locklevel="0" colspan="1" rowspan="1">
                         <labels>
                           <label description="業務經理" languagecode="1028" />
                         </labels>
-                        <control id="art_salesmanager" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="art_salesmanager" disabled="false" uniqueid="{44481648-abd7-ccc4-7951-09cb4b8223da}">
-                          <parameters>
-                            <AutoResolve>true</AutoResolve>
-                            <DisableMru>false</DisableMru>
-                            <DisableQuickFind>false</DisableQuickFind>
-                            <DisableViewPicker>false</DisableViewPicker>
-                            <DefaultViewId>{E88CA999-0B16-4AE9-B6A9-9EDC840D42D8}</DefaultViewId>
-                            <AllowFilterOff>false</AllowFilterOff>
-                          </parameters>
-                        </control>
+                        <control id="art_salesmanager" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="art_salesmanager" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{96f45971-60a1-40d6-8b24-3326c64d0ab6}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
                       </cell>
                       <cell id="{f320ef15-b0ca-473d-ab67-36e2fb33d8c5}" locklevel="0" colspan="2" rowspan="1" showlabel="true">
                         <labels>
@@ -76,20 +87,16 @@
                       </cell>
                     </row>
                     <row>
-                      <cell id="{c2d27cd4-7a77-4102-a3df-8dff0fcbaa46}" locklevel="0" colspan="2" rowspan="1" showlabel="true">
+                      <cell id="{0cbe28cd-2c3e-4fe8-9a87-b0d5a2d2ab5c}" locklevel="0" colspan="1" rowspan="1">
                         <labels>
                           <label description="專案經理" languagecode="1028" />
                         </labels>
-                        <control id="art_projectmanager" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="art_projectmanager" disabled="false" uniqueid="{9ebc5d67-d78d-ea83-7ed2-31cc8d82b905}">
-                          <parameters>
-                            <AutoResolve>true</AutoResolve>
-                            <DisableMru>false</DisableMru>
-                            <DisableQuickFind>false</DisableQuickFind>
-                            <DisableViewPicker>false</DisableViewPicker>
-                            <DefaultViewId>{E88CA999-0B16-4AE9-B6A9-9EDC840D42D8}</DefaultViewId>
-                            <AllowFilterOff>false</AllowFilterOff>
-                          </parameters>
-                        </control>
+                        <control id="art_projectmanager" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="art_projectmanager" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{3e9f3ec2-5d41-4121-aca4-c16f09c05c45}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
                       </cell>
                       <cell id="{cdd45d47-8d94-4b10-8e23-4f64ca68bdde}" locklevel="0" colspan="2" rowspan="1" showlabel="true">
                         <labels>
@@ -139,11 +146,11 @@
                         </labels>
                         <control id="art_clientcategory" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="art_clientcategory" disabled="false" />
                       </cell>
-                      <cell id="{bb965809-549e-4885-8e76-eb0fca45a070}" locklevel="0" colspan="1" rowspan="1">
+                      <cell id="{2db973b0-5e20-75b0-dca5-1124a131e676}" showlabel="true" locklevel="0">
                         <labels>
                           <label description="業主名稱" languagecode="1028" />
                         </labels>
-                        <control id="art_clientname" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="art_clientname" disabled="false" />
+                        <control id="art_clientname" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="art_clientname" disabled="false" />
                       </cell>
                     </row>
                     <row>
@@ -159,20 +166,16 @@
                         </labels>
                         <control id="art_executionenddate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="art_executionenddate" disabled="false" />
                       </cell>
-                      <cell id="{39ce034c-dcd4-46ed-b337-c15e8f6aa6d8}" locklevel="0" colspan="2" rowspan="1" showlabel="true">
+                      <cell id="{072f31f3-4c80-4485-937b-d4840659f301}" locklevel="0" colspan="1" rowspan="1">
                         <labels>
                           <label description="簽約對象" languagecode="1028" />
                         </labels>
-                        <control id="art_signingparty" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="art_signingparty" disabled="false" uniqueid="{5948c1e4-3a9a-2890-c326-6bad231703c7}">
-                          <parameters>
-                            <AutoResolve>true</AutoResolve>
-                            <DisableMru>false</DisableMru>
-                            <DisableQuickFind>false</DisableQuickFind>
-                            <DisableViewPicker>false</DisableViewPicker>
-                            <DefaultViewId>{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}</DefaultViewId>
-                            <AllowFilterOff>false</AllowFilterOff>
-                          </parameters>
-                        </control>
+                        <control id="art_signingparty" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="art_signingparty" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{fcab49cc-35a4-4b44-87eb-ccd86c884c7f}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
                       </cell>
                     </row>
                     <row>
@@ -188,6 +191,16 @@
                         </labels>
                         <control id="art_contractenddate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="art_contractenddate" disabled="false" />
                       </cell>
+                      <cell id="{403d13de-71e0-2128-9d1e-326c22cec0bc}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{3c895d73-bf99-4fcb-9cfc-1f2decd5a90f}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                      </cell>
                     </row>
                   </rows>
                 </section>
@@ -196,13 +209,24 @@
                     <label description="新區段" languagecode="1028" />
                   </labels>
                   <rows>
-                    <row />
+                    <row>
+                      <cell id="{8435d764-cd90-4239-94af-7ab8379385d5}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                      </cell>
+                      <cell id="{f0f9cf1d-49ca-49b9-aaae-d12c574613fb}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                      </cell>
+                    </row>
                     <row>
                       <cell locklevel="0" id="{3e54358d-f0e2-4011-926f-77bd2e54bd3a}" rowspan="4" colspan="1" auto="false">
                         <labels>
                           <label description="主力產品" languagecode="1028" />
                         </labels>
-                        <control indicationOfSubgrid="true" id="Core_Product" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{31abac93-5c74-4be8-a776-1b8eeb296b2a}">
+                        <control indicationOfSubgrid="true" id="Core_Product" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{e5378cc8-e5cb-4c4f-9abf-6edf218fabcb}">
                           <parameters>
                             <RecordsPerPage>4</RecordsPerPage>
                             <AutoExpand>Fixed</AutoExpand>
@@ -221,7 +245,7 @@
                         <labels>
                           <label description="自有產品" languagecode="1028" />
                         </labels>
-                        <control indicationOfSubgrid="true" id="Proprietary_Produc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{dc5f1161-9c0e-41b9-9269-0245daabb5b8}">
+                        <control indicationOfSubgrid="true" id="Proprietary_Produc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{8a17a4fa-2eb8-4eaf-800d-146cc52335e5}">
                           <parameters>
                             <RecordsPerPage>4</RecordsPerPage>
                             <AutoExpand>Fixed</AutoExpand>
@@ -232,6 +256,131 @@
                             <TargetEntityType>art_opptyproductcost</TargetEntityType>
                             <ViewId>{97901D43-390C-EF11-9F89-6045BD5616AB}</ViewId>
                             <ViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{97901D43-390C-EF11-9F89-6045BD5616AB}</ViewIds>
+                            <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="ProjectData_section_7" id="593cceab-97ed-49dc-a80e-05aa32582164" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1111" labelwidth="115">
+                  <labels>
+                    <label description="新區段" languagecode="1028" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{e9844eb6-8d3b-453c-a3a4-6a589860ea5b}">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{b47f5325-d1be-4859-9bb2-8b17b332d76f}">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{fa453b42-cb9d-481b-880d-e24443057627}">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{6862115c-cf1e-438f-8f32-3d10b8cfd2bb}">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{97c8a8f3-24a7-44d5-97c6-06d9181ed9d6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="收入總額 (Y)" languagecode="1028" />
+                        </labels>
+                        <control id="art_mainincome" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="art_mainincome" disabled="false" />
+                      </cell>
+                      <cell id="{bd1ef722-a881-42b1-9fdb-240acc6d2c23}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="商品成本 (Z)" languagecode="1028" />
+                        </labels>
+                        <control id="art_mainprodcost" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="art_mainprodcost" disabled="false" />
+                      </cell>
+                      <cell id="{4a5ff66e-4d92-41bf-8dd1-8db1b084d448}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="收入總額 (AD)" languagecode="1028" />
+                        </labels>
+                        <control id="art_selfincome" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="art_selfincome" disabled="false" />
+                      </cell>
+                      <cell id="{867fec9d-b34c-46f3-8937-676c3835a190}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="自有產品成本 (AE)" languagecode="1028" />
+                        </labels>
+                        <control id="art_selfprodcost" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="art_selfprodcost" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="ProjectData_section_6" id="9580be7a-6a3b-4573-8a0d-f16201f4dffd" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="新區段" languagecode="1028" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{77674b26-c0f3-4d5b-849f-b0d806c51df6}" rowspan="4" colspan="1" auto="false" showlabel="true">
+                        <labels>
+                          <label description="Service" languagecode="1028" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{0db21f94-d933-4dff-8511-c09c94292185}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                            <ViewId>{D77268E8-180D-EF11-9F89-6045BD5616AB}</ViewId>
+                            <ViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{D77268E8-180D-EF11-9F89-6045BD5616AB}</ViewIds>
+                            <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="ProjectData_section_5" id="d8f9d4f4-f126-4f7c-b023-e87af0a5e92a" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="新區段" languagecode="1028" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d458293b-0549-463f-8c5b-420e4363d734}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{956c689a-f01b-420d-8414-30ee0630fbe2}" rowspan="4" colspan="1" auto="false">
+                        <labels>
+                          <label description="Service 人力" languagecode="1028" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Service_Personnel" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{b251dc1c-be92-474e-95db-9188e9d02f98}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                            <ViewId>{ED9B2C44-E00C-EF11-9F8A-6045BD5880EB}</ViewId>
+                            <ViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{ED9B2C44-E00C-EF11-9F8A-6045BD5880EB}</ViewIds>
                             <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
                           </parameters>
                         </control>
@@ -1909,11 +2058,11 @@
             <parameters />
           </customControl>
         </controlDescription>
-        <controlDescription forControl="{31abac93-5c74-4be8-a776-1b8eeb296b2a}">
+        <controlDescription forControl="{e5378cc8-e5cb-4c4f-9abf-6edf218fabcb}">
           <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
             <parameters />
           </customControl>
-          <customControl formFactor="0" name="Microsoft.PowerApps.PowerAppsOneGrid">
+          <customControl name="Microsoft.PowerApps.PowerAppsOneGrid" formFactor="-1">
             <parameters>
               <data-set name="Items">
                 <ViewId>{df43e50f-390c-ef11-9f8a-6045bd5880eb}</ViewId>
@@ -1950,81 +2099,7 @@
               <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
             </parameters>
           </customControl>
-          <customControl formFactor="2" name="Microsoft.PowerApps.PowerAppsOneGrid">
-            <parameters>
-              <data-set name="Items">
-                <ViewId>{df43e50f-390c-ef11-9f8a-6045bd5880eb}</ViewId>
-                <TargetEntityType>art_opptyproductcost</TargetEntityType>
-                <IsUserView>false</IsUserView>
-                <EnableViewPicker>false</EnableViewPicker>
-                <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
-                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{DF43E50F-390C-EF11-9F8A-6045BD5880EB}</FilteredViewIds>
-              </data-set>
-              <data-set name="ChildItems">
-                <ViewId>{df43e50f-390c-ef11-9f8a-6045bd5880eb}</ViewId>
-                <TargetEntityType>art_opptyproductcost</TargetEntityType>
-                <IsUserView>false</IsUserView>
-              </data-set>
-              <EnableEditing type="Enum" static="true">yes</EnableEditing>
-              <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
-              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
-              <EnableSorting type="Enum" static="true">yes</EnableSorting>
-              <EnableGrouping type="Enum" static="true">no</EnableGrouping>
-              <EnableAggregation type="Enum" static="true">no</EnableAggregation>
-              <EnableColumnMoving type="Enum" static="true">no</EnableColumnMoving>
-              <EnableMultipleSelection type="Enum" static="true">yes</EnableMultipleSelection>
-              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
-              <EnableJumpBar type="Enum" static="true">no</EnableJumpBar>
-              <EnablePagination type="Enum" static="true">no</EnablePagination>
-              <EnableDropdownColor type="Enum" static="true">no</EnableDropdownColor>
-              <EnableStatusIcons type="Enum" static="true">no</EnableStatusIcons>
-              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
-              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
-              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
-              <ShowAvatar type="Enum" static="true">yes</ShowAvatar>
-              <ShowFooter type="Enum" static="true">yes</ShowFooter>
-              <ShowColumnHeaders type="Enum" static="true">yes</ShowColumnHeaders>
-              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
-            </parameters>
-          </customControl>
-          <customControl formFactor="1" name="Microsoft.PowerApps.PowerAppsOneGrid">
-            <parameters>
-              <data-set name="Items">
-                <ViewId>{df43e50f-390c-ef11-9f8a-6045bd5880eb}</ViewId>
-                <TargetEntityType>art_opptyproductcost</TargetEntityType>
-                <IsUserView>false</IsUserView>
-                <EnableViewPicker>false</EnableViewPicker>
-                <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
-                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{DF43E50F-390C-EF11-9F8A-6045BD5880EB}</FilteredViewIds>
-              </data-set>
-              <data-set name="ChildItems">
-                <ViewId>{df43e50f-390c-ef11-9f8a-6045bd5880eb}</ViewId>
-                <TargetEntityType>art_opptyproductcost</TargetEntityType>
-                <IsUserView>false</IsUserView>
-              </data-set>
-              <EnableEditing type="Enum" static="true">yes</EnableEditing>
-              <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
-              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
-              <EnableSorting type="Enum" static="true">yes</EnableSorting>
-              <EnableGrouping type="Enum" static="true">no</EnableGrouping>
-              <EnableAggregation type="Enum" static="true">no</EnableAggregation>
-              <EnableColumnMoving type="Enum" static="true">no</EnableColumnMoving>
-              <EnableMultipleSelection type="Enum" static="true">yes</EnableMultipleSelection>
-              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
-              <EnableJumpBar type="Enum" static="true">no</EnableJumpBar>
-              <EnablePagination type="Enum" static="true">no</EnablePagination>
-              <EnableDropdownColor type="Enum" static="true">no</EnableDropdownColor>
-              <EnableStatusIcons type="Enum" static="true">no</EnableStatusIcons>
-              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
-              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
-              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
-              <ShowAvatar type="Enum" static="true">yes</ShowAvatar>
-              <ShowFooter type="Enum" static="true">yes</ShowFooter>
-              <ShowColumnHeaders type="Enum" static="true">yes</ShowColumnHeaders>
-              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
-            </parameters>
-          </customControl>
-          <customControl name="MscrmControls.Grid.GridControl" formFactor="-1">
+          <customControl formFactor="2" name="MscrmControls.Grid.GridControl">
             <parameters>
               <data-set name="Grid">
                 <ViewId>{df43e50f-390c-ef11-9f8a-6045bd5880eb}</ViewId>
@@ -2036,6 +2111,364 @@
               </data-set>
               <data-set name="SubGrid">
                 <ViewId>{df43e50f-390c-ef11-9f8a-6045bd5880eb}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{df43e50f-390c-ef11-9f8a-6045bd5880eb}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
+                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{DF43E50F-390C-EF11-9F8A-6045BD5880EB}</FilteredViewIds>
+              </data-set>
+              <data-set name="SubGrid">
+                <ViewId>{df43e50f-390c-ef11-9f8a-6045bd5880eb}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{df43e50f-390c-ef11-9f8a-6045bd5880eb}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
+                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{DF43E50F-390C-EF11-9F8A-6045BD5880EB}</FilteredViewIds>
+              </data-set>
+              <data-set name="SubGrid">
+                <ViewId>{df43e50f-390c-ef11-9f8a-6045bd5880eb}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl name="Microsoft.PowerApps.PowerAppsOneGrid" formFactor="-2">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{df43e50f-390c-ef11-9f8a-6045bd5880eb}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
+                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{DF43E50F-390C-EF11-9F8A-6045BD5880EB}</FilteredViewIds>
+              </data-set>
+              <data-set name="ChildItems">
+                <ViewId>{df43e50f-390c-ef11-9f8a-6045bd5880eb}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+              </data-set>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <EnableSorting type="Enum" static="true">yes</EnableSorting>
+              <EnableGrouping type="Enum" static="true">no</EnableGrouping>
+              <EnableAggregation type="Enum" static="true">no</EnableAggregation>
+              <EnableColumnMoving type="Enum" static="true">no</EnableColumnMoving>
+              <EnableMultipleSelection type="Enum" static="true">yes</EnableMultipleSelection>
+              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
+              <EnableJumpBar type="Enum" static="true">no</EnableJumpBar>
+              <EnablePagination type="Enum" static="true">no</EnablePagination>
+              <EnableDropdownColor type="Enum" static="true">no</EnableDropdownColor>
+              <EnableStatusIcons type="Enum" static="true">no</EnableStatusIcons>
+              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
+              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
+              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
+              <ShowAvatar type="Enum" static="true">yes</ShowAvatar>
+              <ShowFooter type="Enum" static="true">yes</ShowFooter>
+              <ShowColumnHeaders type="Enum" static="true">yes</ShowColumnHeaders>
+              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{8a17a4fa-2eb8-4eaf-800d-146cc52335e5}">
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters />
+          </customControl>
+          <customControl name="Microsoft.PowerApps.PowerAppsOneGrid" formFactor="-1">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
+                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{97901D43-390C-EF11-9F89-6045BD5616AB}</FilteredViewIds>
+              </data-set>
+              <data-set name="ChildItems">
+                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+              </data-set>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <EnableSorting type="Enum" static="true">yes</EnableSorting>
+              <EnableGrouping type="Enum" static="true">no</EnableGrouping>
+              <EnableAggregation type="Enum" static="true">no</EnableAggregation>
+              <EnableColumnMoving type="Enum" static="true">no</EnableColumnMoving>
+              <EnableMultipleSelection type="Enum" static="true">yes</EnableMultipleSelection>
+              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
+              <EnableJumpBar type="Enum" static="true">no</EnableJumpBar>
+              <EnablePagination type="Enum" static="true">no</EnablePagination>
+              <EnableDropdownColor type="Enum" static="true">no</EnableDropdownColor>
+              <EnableStatusIcons type="Enum" static="true">yes</EnableStatusIcons>
+              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
+              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
+              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
+              <ShowAvatar type="Enum" static="true">yes</ShowAvatar>
+              <ShowFooter type="Enum" static="true">yes</ShowFooter>
+              <ShowColumnHeaders type="Enum" static="true">yes</ShowColumnHeaders>
+              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
+                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{97901D43-390C-EF11-9F89-6045BD5616AB}</FilteredViewIds>
+              </data-set>
+              <data-set name="SubGrid">
+                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
+                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{97901D43-390C-EF11-9F89-6045BD5616AB}</FilteredViewIds>
+              </data-set>
+              <data-set name="SubGrid">
+                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
+                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{97901D43-390C-EF11-9F89-6045BD5616AB}</FilteredViewIds>
+              </data-set>
+              <data-set name="SubGrid">
+                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl name="Microsoft.PowerApps.PowerAppsOneGrid" formFactor="-2">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
+                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{97901D43-390C-EF11-9F89-6045BD5616AB}</FilteredViewIds>
+              </data-set>
+              <data-set name="ChildItems">
+                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+              </data-set>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <EnableSorting type="Enum" static="true">yes</EnableSorting>
+              <EnableGrouping type="Enum" static="true">no</EnableGrouping>
+              <EnableAggregation type="Enum" static="true">no</EnableAggregation>
+              <EnableColumnMoving type="Enum" static="true">no</EnableColumnMoving>
+              <EnableMultipleSelection type="Enum" static="true">yes</EnableMultipleSelection>
+              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
+              <EnableJumpBar type="Enum" static="true">no</EnableJumpBar>
+              <EnablePagination type="Enum" static="true">no</EnablePagination>
+              <EnableDropdownColor type="Enum" static="true">no</EnableDropdownColor>
+              <EnableStatusIcons type="Enum" static="true">yes</EnableStatusIcons>
+              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
+              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
+              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
+              <ShowAvatar type="Enum" static="true">yes</ShowAvatar>
+              <ShowFooter type="Enum" static="true">yes</ShowFooter>
+              <ShowColumnHeaders type="Enum" static="true">yes</ShowColumnHeaders>
+              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{b251dc1c-be92-474e-95db-9188e9d02f98}">
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters />
+          </customControl>
+          <customControl name="Microsoft.PowerApps.PowerAppsOneGrid" formFactor="-1">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{ed9b2c44-e00c-ef11-9f8a-6045bd5880eb}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
+                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{ED9B2C44-E00C-EF11-9F8A-6045BD5880EB}</FilteredViewIds>
+              </data-set>
+              <data-set name="ChildItems">
+                <ViewId>{ed9b2c44-e00c-ef11-9f8a-6045bd5880eb}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+              </data-set>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <EnableSorting type="Enum" static="true">yes</EnableSorting>
+              <EnableGrouping type="Enum" static="true">no</EnableGrouping>
+              <EnableAggregation type="Enum" static="true">no</EnableAggregation>
+              <EnableColumnMoving type="Enum" static="true">no</EnableColumnMoving>
+              <EnableMultipleSelection type="Enum" static="true">yes</EnableMultipleSelection>
+              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
+              <EnableJumpBar type="Enum" static="true">no</EnableJumpBar>
+              <EnablePagination type="Enum" static="true">no</EnablePagination>
+              <EnableDropdownColor type="Enum" static="true">no</EnableDropdownColor>
+              <EnableStatusIcons type="Enum" static="true">yes</EnableStatusIcons>
+              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
+              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
+              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
+              <ShowAvatar type="Enum" static="true">yes</ShowAvatar>
+              <ShowFooter type="Enum" static="true">yes</ShowFooter>
+              <ShowColumnHeaders type="Enum" static="true">yes</ShowColumnHeaders>
+              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{ed9b2c44-e00c-ef11-9f8a-6045bd5880eb}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
+                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{ED9B2C44-E00C-EF11-9F8A-6045BD5880EB}</FilteredViewIds>
+              </data-set>
+              <data-set name="SubGrid">
+                <ViewId>{ed9b2c44-e00c-ef11-9f8a-6045bd5880eb}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{ed9b2c44-e00c-ef11-9f8a-6045bd5880eb}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
+                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{ED9B2C44-E00C-EF11-9F8A-6045BD5880EB}</FilteredViewIds>
+              </data-set>
+              <data-set name="SubGrid">
+                <ViewId>{ed9b2c44-e00c-ef11-9f8a-6045bd5880eb}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+              </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{ed9b2c44-e00c-ef11-9f8a-6045bd5880eb}</ViewId>
+                <TargetEntityType>art_opptyproductcost</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
+                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{ED9B2C44-E00C-EF11-9F8A-6045BD5880EB}</FilteredViewIds>
+              </data-set>
+              <data-set name="SubGrid">
+                <ViewId>{ed9b2c44-e00c-ef11-9f8a-6045bd5880eb}</ViewId>
                 <TargetEntityType>art_opptyproductcost</TargetEntityType>
                 <IsUserView>false</IsUserView>
               </data-set>
@@ -2050,22 +2483,33 @@
             </parameters>
           </customControl>
         </controlDescription>
-        <controlDescription forControl="{dc5f1161-9c0e-41b9-9269-0245daabb5b8}">
+        <controlDescription forControl="{0db21f94-d933-4dff-8511-c09c94292185}">
           <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
-            <parameters />
+            <parameters>
+              <RecordsPerPage>4</RecordsPerPage>
+              <AutoExpand>Fixed</AutoExpand>
+              <EnableQuickFind>false</EnableQuickFind>
+              <EnableViewPicker>false</EnableViewPicker>
+              <EnableChartPicker>true</EnableChartPicker>
+              <ChartGridMode>All</ChartGridMode>
+              <TargetEntityType>art_opptyproductcost</TargetEntityType>
+              <ViewId>{D77268E8-180D-EF11-9F89-6045BD5616AB}</ViewId>
+              <ViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{D77268E8-180D-EF11-9F89-6045BD5616AB}</ViewIds>
+              <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
+            </parameters>
           </customControl>
-          <customControl name="MscrmControls.Grid.GridControl" formFactor="-1">
+          <customControl formFactor="0" name="MscrmControls.Grid.GridControl">
             <parameters>
               <data-set name="Grid">
-                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+                <ViewId>{d77268e8-180d-ef11-9f89-6045bd5616ab}</ViewId>
                 <TargetEntityType>art_opptyproductcost</TargetEntityType>
                 <IsUserView>false</IsUserView>
                 <EnableViewPicker>false</EnableViewPicker>
                 <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
-                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{97901D43-390C-EF11-9F89-6045BD5616AB}</FilteredViewIds>
+                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{D77268E8-180D-EF11-9F89-6045BD5616AB}</FilteredViewIds>
               </data-set>
               <data-set name="SubGrid">
-                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+                <ViewId>{d77268e8-180d-ef11-9f89-6045bd5616ab}</ViewId>
                 <TargetEntityType>art_opptyproductcost</TargetEntityType>
                 <IsUserView>false</IsUserView>
               </data-set>
@@ -2079,115 +2523,54 @@
               <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
             </parameters>
           </customControl>
-          <customControl formFactor="0" name="Microsoft.PowerApps.PowerAppsOneGrid">
+          <customControl formFactor="2" name="MscrmControls.Grid.GridControl">
             <parameters>
-              <data-set name="Items">
-                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+              <data-set name="Grid">
+                <ViewId>{d77268e8-180d-ef11-9f89-6045bd5616ab}</ViewId>
                 <TargetEntityType>art_opptyproductcost</TargetEntityType>
                 <IsUserView>false</IsUserView>
                 <EnableViewPicker>false</EnableViewPicker>
                 <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
-                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{97901D43-390C-EF11-9F89-6045BD5616AB}</FilteredViewIds>
+                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{D77268E8-180D-EF11-9F89-6045BD5616AB}</FilteredViewIds>
               </data-set>
-              <data-set name="ChildItems">
-                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+              <data-set name="SubGrid">
+                <ViewId>{d77268e8-180d-ef11-9f89-6045bd5616ab}</ViewId>
                 <TargetEntityType>art_opptyproductcost</TargetEntityType>
                 <IsUserView>false</IsUserView>
               </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
               <EnableEditing type="Enum" static="true">yes</EnableEditing>
-              <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
               <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
-              <EnableSorting type="Enum" static="true">yes</EnableSorting>
-              <EnableGrouping type="Enum" static="true">no</EnableGrouping>
-              <EnableAggregation type="Enum" static="true">no</EnableAggregation>
-              <EnableColumnMoving type="Enum" static="true">no</EnableColumnMoving>
-              <EnableMultipleSelection type="Enum" static="true">yes</EnableMultipleSelection>
-              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
-              <EnableJumpBar type="Enum" static="true">no</EnableJumpBar>
-              <EnablePagination type="Enum" static="true">no</EnablePagination>
-              <EnableDropdownColor type="Enum" static="true">no</EnableDropdownColor>
-              <EnableStatusIcons type="Enum" static="true">yes</EnableStatusIcons>
-              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
-              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
-              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
-              <ShowAvatar type="Enum" static="true">yes</ShowAvatar>
-              <ShowFooter type="Enum" static="true">yes</ShowFooter>
-              <ShowColumnHeaders type="Enum" static="true">yes</ShowColumnHeaders>
-              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
             </parameters>
           </customControl>
-          <customControl formFactor="2" name="Microsoft.PowerApps.PowerAppsOneGrid">
+          <customControl formFactor="1" name="MscrmControls.Grid.GridControl">
             <parameters>
-              <data-set name="Items">
-                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+              <data-set name="Grid">
+                <ViewId>{d77268e8-180d-ef11-9f89-6045bd5616ab}</ViewId>
                 <TargetEntityType>art_opptyproductcost</TargetEntityType>
                 <IsUserView>false</IsUserView>
                 <EnableViewPicker>false</EnableViewPicker>
                 <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
-                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{97901D43-390C-EF11-9F89-6045BD5616AB}</FilteredViewIds>
+                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{D77268E8-180D-EF11-9F89-6045BD5616AB}</FilteredViewIds>
               </data-set>
-              <data-set name="ChildItems">
-                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
+              <data-set name="SubGrid">
+                <ViewId>{d77268e8-180d-ef11-9f89-6045bd5616ab}</ViewId>
                 <TargetEntityType>art_opptyproductcost</TargetEntityType>
                 <IsUserView>false</IsUserView>
               </data-set>
+              <EnableGroupBy type="Enum" static="true">yes</EnableGroupBy>
               <EnableEditing type="Enum" static="true">yes</EnableEditing>
-              <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <ListLayoutDirection type="Enum" static="true">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse type="Enum" static="true">false</EnableSubGridAutoCollapse>
               <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
-              <EnableSorting type="Enum" static="true">yes</EnableSorting>
-              <EnableGrouping type="Enum" static="true">no</EnableGrouping>
-              <EnableAggregation type="Enum" static="true">no</EnableAggregation>
-              <EnableColumnMoving type="Enum" static="true">no</EnableColumnMoving>
-              <EnableMultipleSelection type="Enum" static="true">yes</EnableMultipleSelection>
-              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
-              <EnableJumpBar type="Enum" static="true">no</EnableJumpBar>
-              <EnablePagination type="Enum" static="true">no</EnablePagination>
-              <EnableDropdownColor type="Enum" static="true">no</EnableDropdownColor>
-              <EnableStatusIcons type="Enum" static="true">yes</EnableStatusIcons>
-              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
-              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
-              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
-              <ShowAvatar type="Enum" static="true">yes</ShowAvatar>
-              <ShowFooter type="Enum" static="true">yes</ShowFooter>
-              <ShowColumnHeaders type="Enum" static="true">yes</ShowColumnHeaders>
-              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
-            </parameters>
-          </customControl>
-          <customControl formFactor="1" name="Microsoft.PowerApps.PowerAppsOneGrid">
-            <parameters>
-              <data-set name="Items">
-                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
-                <TargetEntityType>art_opptyproductcost</TargetEntityType>
-                <IsUserView>false</IsUserView>
-                <EnableViewPicker>false</EnableViewPicker>
-                <RelationshipName>art_opptyproductcost_Opportunity_opportunity</RelationshipName>
-                <FilteredViewIds>{2561D6B3-B269-42D3-BF72-537C52D8149A},{97901D43-390C-EF11-9F89-6045BD5616AB}</FilteredViewIds>
-              </data-set>
-              <data-set name="ChildItems">
-                <ViewId>{97901d43-390c-ef11-9f89-6045bd5616ab}</ViewId>
-                <TargetEntityType>art_opptyproductcost</TargetEntityType>
-                <IsUserView>false</IsUserView>
-              </data-set>
-              <EnableEditing type="Enum" static="true">yes</EnableEditing>
-              <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
-              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
-              <EnableSorting type="Enum" static="true">yes</EnableSorting>
-              <EnableGrouping type="Enum" static="true">no</EnableGrouping>
-              <EnableAggregation type="Enum" static="true">no</EnableAggregation>
-              <EnableColumnMoving type="Enum" static="true">no</EnableColumnMoving>
-              <EnableMultipleSelection type="Enum" static="true">yes</EnableMultipleSelection>
-              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
-              <EnableJumpBar type="Enum" static="true">no</EnableJumpBar>
-              <EnablePagination type="Enum" static="true">no</EnablePagination>
-              <EnableDropdownColor type="Enum" static="true">no</EnableDropdownColor>
-              <EnableStatusIcons type="Enum" static="true">yes</EnableStatusIcons>
-              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
-              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
-              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
-              <ShowAvatar type="Enum" static="true">yes</ShowAvatar>
-              <ShowFooter type="Enum" static="true">yes</ShowFooter>
-              <ShowColumnHeaders type="Enum" static="true">yes</ShowColumnHeaders>
-              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
+              <HideNestedGridColumnHeader type="Enum" static="true">no</HideNestedGridColumnHeader>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
             </parameters>
           </customControl>
         </controlDescription>
@@ -2205,6 +2588,7 @@
         <Library name="Sales/Opportunity/Opportunity_main_system_library.js" libraryUniqueId="{2cbe0022-0929-11e7-93ae-92361f002671}" />
         <Library name="Forecasting/Opportunity/Opportunity_Forecast_MainSystemLibrary.js" libraryUniqueId="{85640c20-938b-41e2-897f-fa8a476c6f6d}" />
         <Library name="art_OpportunityUiLibrary" libraryUniqueId="{07c48d73-32eb-484a-9cc9-9e30ef6e9287}" />
+        <Library name="art_DynamicOptionSetLibrary" libraryUniqueId="{fcb6923f-87eb-493b-be38-c4aa1a937498}" />
       </formLibraries>
       <footer id="{6ca5aff2-7ce8-4732-81aa-4cb57ab3b06c}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
         <rows>

@@ -7,12 +7,13 @@ art.OpptyUi = {
         let userId = Xrm.Utility.getGlobalContext()?.userSettings?.userId?.replace(/[{}]/g, '');// 獲取當前用戶 ID
 
         this.action.validateFields(formContext,this);
+        this.action.setOptionSetFields(formContext);
     },
     onSave: async function (executionContext) {
         console.log('執行 onSave');
         let formContext = executionContext.getFormContext();
         console.log('formContext = ',formContext);
-        let delayInMillis = 3000;
+        let delayInMillis = 1000;
         setTimeout(async ()=>{
             await this.action.UpdateOpptyProductCostRecords(formContext,this)
         }, delayInMillis);
@@ -63,6 +64,17 @@ art.OpptyUi = {
                     }
                 );
             }
+        },
+        setOptionSetFields: (formContext) => {
+            let fields ={
+                "art_projectexecutionunit": "Organization",
+                "art_salesmanager": "AccountManager",
+                "art_projectmanager": "ProjectManager",
+                "art_clientname": "IncomeSource",
+            }
+            Object.keys(fields).map(key=>{
+                art.DynamicOptionSet.applyDynamicOptions(formContext, key, fields[key]);
+            })
         }
     },
     validate: {
