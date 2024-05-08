@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.24042.190" SolutionPackageVersion="9.2" languagecode="1028" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.24043.208" SolutionPackageVersion="9.2" languagecode="1028" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>BuildCaseApiService</UniqueName>
     <LocalizedNames>
@@ -78,7 +78,9 @@
       </Addresses>
     </Publisher>
     <RootComponents>
+      <RootComponent type="29" id="{76137520-630c-ef11-9f8a-6045bd5880eb}" behavior="0" />
       <RootComponent type="29" id="{fef042a4-1b09-ef11-9f89-6045bd5b32a7}" behavior="0" />
+      <RootComponent type="61" schemaName="art_BuildCaseApiLibrary" behavior="0" />
       <RootComponent type="91" id="{efa3ce91-95fd-46bb-8aa5-06b150293d47}" schemaName="BuildCaseApiServicePlugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47d8043b23835288" behavior="0" />
       <RootComponent type="92" id="{cbebf49a-1c09-ef11-9f89-6045bd5880eb}" behavior="0" />
     </RootComponents>

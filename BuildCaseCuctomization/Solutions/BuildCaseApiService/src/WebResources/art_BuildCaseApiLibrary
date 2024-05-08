@@ -1,0 +1,34 @@
+var art = art || {};
+art.BuildCaseApi = {
+    callApi: async function (action, inputParamStr) {
+        const token = await this.getAccessToken();
+        const url = "https://beesmart.iisigroup.com/GU8sGbwY9M42FdBx9tRF/ProjectCreation/" + action;
+
+        const response = await fetch(url, {
+            method: "POST",
+            body: inputParamStr,
+            headers: new Headers({
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + token
+            }),
+        })
+            .then((res) => res.json())
+            .catch((error) => console.error("Error:", error))
+
+        return response;
+    },
+    getAccessToken: async function () {
+        const request = {
+            getMetadata: function () {
+                return {
+                    operationName: "art_GetBuildCaseToken",
+                    boundParameter: null,
+                    operationType: 0
+                }
+            }
+        }
+        const response = await Xrm.WebApi.online.execute(request).then(data => data.json());
+        const token = response?.Token ?? "";
+        return token;
+    }
+}
