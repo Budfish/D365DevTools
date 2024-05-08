@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <CustomAction Id="art.opportunity.UpdateAMButton.CustomAction" Location="Mscrm.HomepageGrid.opportunity.MainTab.Management.Controls._children" Sequence="6">
+      <CommandUIDefinition>
+        <Button Command="art.opportunity.UpdateAMCommand" Id="art.opportunity.UpdateAMButton" LabelText="$LocLabels:art.opportunity.UpdateAMButton.LabelText" Sequence="6" TemplateAlias="o1" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="art.opportunity.UpdateCustomerButton.CustomAction" Location="Mscrm.HomepageGrid.opportunity.MainTab.Management.Controls._children" Sequence="10">
+      <CommandUIDefinition>
+        <Button Command="art.opportunity.UpdateCustomerCommand" Id="art.opportunity.UpdateCustomerButton" LabelText="$LocLabels:art.opportunity.UpdateCustomerButton.LabelText" Sequence="10" TemplateAlias="o1" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="art.opportunity.UpdateOrganizationButton.CustomAction" Location="Mscrm.HomepageGrid.opportunity.MainTab.Management.Controls._children" Sequence="9">
+      <CommandUIDefinition>
+        <Button Command="art.opportunity.UpdateOrganizationCommand" Id="art.opportunity.UpdateOrganizationButton" LabelText="$LocLabels:art.opportunity.UpdateOrganizationButton.LabelText" Sequence="9" TemplateAlias="o1" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="art.opportunity.UpdatePMButton.CustomAction" Location="Mscrm.HomepageGrid.opportunity.MainTab.Management.Controls._children" Sequence="8">
+      <CommandUIDefinition>
+        <Button Command="art.opportunity.UpdatePMCommand" Id="art.opportunity.UpdatePMButton" LabelText="$LocLabels:art.opportunity.UpdatePMButton.LabelText" Sequence="8" TemplateAlias="o1" />
+      </CommandUIDefinition>
+    </CustomAction>
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions>
+    <CommandDefinition Id="art.opportunity.UpdateAMCommand">
+      <EnableRules />
+      <DisplayRules />
+      <Actions>
+        <JavaScriptFunction FunctionName="art.OpportunityRibbon.click" Library="$webresource:art_CallSyncBuildCaseOptionData">
+          <StringParameter Value="AccountManager" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="art.opportunity.UpdateCustomerCommand">
+      <EnableRules />
+      <DisplayRules />
+      <Actions>
+        <JavaScriptFunction FunctionName="art.OpportunityRibbon.click" Library="$webresource:art_CallSyncBuildCaseOptionData">
+          <StringParameter Value="Customer" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="art.opportunity.UpdateOrganizationCommand">
+      <EnableRules />
+      <DisplayRules />
+      <Actions>
+        <JavaScriptFunction FunctionName="art.OpportunityRibbon.click" Library="$webresource:art_CallSyncBuildCaseOptionData">
+          <StringParameter Value="Organization" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="art.opportunity.UpdatePMCommand">
+      <EnableRules />
+      <DisplayRules />
+      <Actions>
+        <JavaScriptFunction FunctionName="art.OpportunityRibbon.click" Library="$webresource:art_CallSyncBuildCaseOptionData">
+          <StringParameter Value="ProjectManager" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+  </CommandDefinitions>
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules />
+    <EnableRules />
+  </RuleDefinitions>
+  <LocLabels>
+    <LocLabel Id="art.opportunity.UpdateAMButton.LabelText">
+      <Titles>
+        <Title description="Update AM" languagecode="1028" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="art.opportunity.UpdateCustomerButton.LabelText">
+      <Titles>
+        <Title description="Update Customer" languagecode="1028" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="art.opportunity.UpdateOrganizationButton.LabelText">
+      <Titles>
+        <Title description="Update Organization" languagecode="1028" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="art.opportunity.UpdatePMButton.LabelText">
+      <Titles>
+        <Title description="Update PM" languagecode="1028" />
+      </Titles>
+    </LocLabel>
+  </LocLabels>
+</RibbonDiffXml>
