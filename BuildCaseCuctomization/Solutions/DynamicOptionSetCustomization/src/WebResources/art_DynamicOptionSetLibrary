@@ -1,8 +1,7 @@
 var art = art || {};
 art.DynamicOptionSet = {
-    applyDynamicOptions: async function (executionContext, attributeName, optionSetConfigCode) {
+    applyDynamicOptions: async function (formContext, attributeName, optionSetConfigCode) {
         // 命名
-        const formContext = executionContext.getFormContext();
         const fieldControl = formContext.getControl(attributeName);
 
         // 執行動作
