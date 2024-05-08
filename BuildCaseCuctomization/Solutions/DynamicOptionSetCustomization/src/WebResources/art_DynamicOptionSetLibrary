@@ -1,5 +1,5 @@
 var art = art || {};
-art.DynamicOptionSetLibrary = {
+art.DynamicOptionSet = {
     applyDynamicOptions: async function (executionContext, attributeName, optionSetConfigCode) {
         // 命名
         const formContext = executionContext.getFormContext();

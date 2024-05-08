@@ -3,6 +3,7 @@
   <WebResourceId>{57bf9660-1b09-ef11-9f89-6045bd5b32a7}</WebResourceId>
   <Name>art_DynamicOptionSetLibrary</Name>
   <DisplayName>DynamicOptionSetLibrary</DisplayName>
+  <LanguageCode>0</LanguageCode>
   <WebResourceType>3</WebResourceType>
   <IntroducedVersion>1.0.0.0</IntroducedVersion>
   <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
