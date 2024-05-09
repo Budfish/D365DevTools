@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.24043.208" SolutionPackageVersion="9.2" languagecode="1028" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>BuildCaseOpptyProduct</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="BuildCaseOpptyProduct" languagecode="1028" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.0.0</Version>
+    <Managed>2</Managed>
+    <Publisher>
+      <UniqueName>ArtSolutions</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="ArtSolutions" languagecode="1028" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>art</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>75091</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="art_opptyproductcost" behavior="0" />
+      <RootComponent type="1" schemaName="opportunity" behavior="2" />
+      <RootComponent type="29" id="{bf8f0cd9-330c-ef11-9f89-6045bd5616ab}" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="1" schemaName="opportunity" displayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_runtimeservicerevenue" displayName="執行期服務收入" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_runtimeservicerevenue_base" displayName="執行期服務收入 (基準貨幣)" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="art_executionrate" displayName="執行期成本率" parentSchemaName="opportunity" parentDisplayName="商機" solution="Active" />
+        <Dependent type="2" schemaName="art_runtimeservicerevenue" displayName="執行期服務收入" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="art_executionrate" displayName="執行期成本率" parentSchemaName="opportunity" parentDisplayName="商機" solution="Active" />
+        <Dependent type="2" schemaName="art_runtimeservicerevenue_base" displayName="執行期服務收入 (基準貨幣)" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="name" displayName="專案名稱" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="10" schemaName="art_opptyproductcost_Opportunity_opportunity" displayName="art_opptyproductcost_Opportunity_opportunity" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="opportunityid" displayName="商機" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_runtimeservicerevenue" displayName="執行期服務收入" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="opportunityid" displayName="商機" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_runtimeservicerevenue_base" displayName="執行期服務收入 (基準貨幣)" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

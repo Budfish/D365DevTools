@@ -200,6 +200,8 @@ Solution (Adonis)
             年度(sort), 收入總額 (Y), 商品成本 (Z)
         View - 自有產品
             年度(sort), 收入總額 (AD), 自有產品成本 (AE)
+        View - Service人力
+            年度(sort), Band<x>, 其中<x>是1~9
         
     Action - UpdateOpptyProductCostRecords
         Input

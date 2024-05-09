@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
@@ -46,7 +47,7 @@ namespace BuildCaseApiServicePlugins.Services
             var obj = JsonSerializer.Deserialize<BuildCaseConnectionModel>(json);
             return obj;
         }
-        private string GetAccessToken()
+        internal string GetAccessToken()
         {
             BuildCaseConnectionModel connection = GetConnection();
             try
@@ -95,13 +96,14 @@ namespace BuildCaseApiServicePlugins.Services
             #endregion
             throw new Exception($"取得Token失敗。");
         }
-        private string GetApiRoute(string action)
+        private Uri GetApiRoute(string action)
         {
-            return domain + action;
+            string uriStr = domain + action;
+            return new Uri(uriStr, UriKind.Absolute);
         }
         internal string GetResponseString(string action, string requestBodyJson)
         {
-            string apiRoute = GetApiRoute(action);
+            Uri apiRoute = GetApiRoute(action);
             string accessToken = GetAccessToken();
             try
             {
@@ -109,7 +111,7 @@ namespace BuildCaseApiServicePlugins.Services
                 {
                     using (HttpClient client = new HttpClient())
                     {
-                        client.Timeout = TimeSpan.FromMilliseconds(15000);
+                        client.Timeout = TimeSpan.FromMinutes(2);
                         client.DefaultRequestHeaders.ConnectionClose = true;
                         client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
 

@@ -1,0 +1,169 @@
+var art = art || {};
+art.OpportunityRibbon = {
+    click: async function (buttonName) {
+        const data = {
+            "OptionCode": buttonName
+        }
+        await this.action.syncDataFromScript(data, this);
+    },
+    action: {
+        callSyncBuildCaseOptionData: async function (data, self) {
+            const request = new self.class.SyncBuildCaseOptionData(data);
+            await Xrm.WebApi.online.execute(request).then(
+                function success(result) {
+                    console.log(result)
+                },
+                function error(error) {
+                    console.log(error)
+                }
+            );
+        },
+        syncDataFromScript: async function (data, self) {
+            Xrm.Utility.showProgressIndicator("資料同步中...");
+            const syncConfig = new self.class.SyncDataConfig(data);
+            const inputData = syncConfig.apiInputData;
+            const response = await art.BuildCaseApi.callApi(inputData.action, inputData.inputParamStr);
+            await syncConfig.setupOptionConfig(response);
+            Xrm.Utility.closeProgressIndicator();
+        }
+    },
+    class: {
+        SyncBuildCaseOptionData: class {
+            constructor(data) {
+                const { OptionCode } = data;
+                this.OptionCode = OptionCode;
+            }
+            getMetadata() {
+                return {
+                    boundParameter: null,
+                    parameterTypes: {
+                        OptionCode: {
+                            typeName: "Edm.String",
+                            structuralProperty: 1
+                        }
+                    },
+                    operationType: 0,
+                    operationName: "art_SyncBuildCaseOptionData"
+                };
+            }
+        },
+        SyncDataConfig: class {
+            config;
+            code;
+            optionValueBase;
+            apiInputData;
+            setupOptionConfig;
+            constructor(data) {
+                const { OptionCode } = data;
+                switch (OptionCode) {
+                    case "AccountManager": {
+                        this.config = this.SyncAccountManagerConfig;
+                        break;
+                    }
+                    case "ProjectManager": {
+                        this.config = this.SyncProjectManagerConfig;
+                        break;
+                    }
+                    case "Organization": {
+                        this.config = this.SyncOrganizationConfig;
+                        break;
+                    }
+                    case "IncomeSource": {
+                        this.config = this.SyncIncomeSourceConfig;
+                        break;
+                    }
+                    case "Customer": {
+                        this.config = this.SyncCustomerConfig;
+                        break;
+                    }
+                    default: {
+                        this.config = this.DefaultSyncConfig;
+                        break;
+                    }
+                }
+                this.code = this.config.code;
+                this.optionValueBase = this.config.optionValueBase;
+                this.apiInputData = this.config.apiInputData;
+                this.setupOptionConfig = this.config.setupOptionConfig;
+            }
+            SyncAccountManagerConfig = {
+                code: "AccountManager",
+                optionValueBase: 750910000,
+                apiInputData: { action: "GetManager?RoleType=AM", inputParamStr: "" },
+                setupOptionConfig: async function (data) {
+                    this._setupOptionConfig(data, "empTwName");
+                }
+            }
+            SyncProjectManagerConfig = {
+                code: "ProjectManager",
+                optionValueBase: 750910000,
+                apiInputData: { action: "GetManager?RoleType=PM", inputParamStr: "" },
+                setupOptionConfig: async function (data) {
+                    this._setupOptionConfig(data, "empTwName");
+                }
+            }
+            SyncOrganizationConfig = {
+                code: "Organization",
+                optionValueBase: 750910000,
+                apiInputData: { action: "GetOrgList", inputParamStr: "" },
+                setupOptionConfig: async function (data) {
+                    this._setupOptionConfig(data, "unitName");
+                }
+            }
+            SyncIncomeSourceConfig = {
+                code: "IncomeSource",
+                optionValueBase: 750910000,
+                apiInputData: { action: "GetCustomer?DataType=INCOME_SOURCE", inputParamStr: "" },
+                setupOptionConfig: async function (data) {
+                    this._setupOptionConfig(data, "dataName");
+                }
+            }
+            SyncCustomerConfig = {
+                code: "CUSTOMER",
+                optionValueBase: 0,
+                apiInputData: { action: "GetCustomer?DataType=CUSTOMER", inputParamStr: "" },
+                setupOptionConfig: async function (data) {
+
+                }
+            }
+            DefaultSyncConfig = {
+                optionValueBase: 0,
+                apiInputData: { action: "", inputParamStr: "" },
+                setupOptionConfig: async function (data) { }
+            }
+            async _setupOptionConfig(data, nameField) {
+                const dataResult = data.dataResult;
+                const jsonObj = {};
+                dataResult.forEach((v, i, a) => {
+                    const key = v?.[nameField] ?? "(沒有名稱)";
+                    jsonObj[key] = this.optionValueBase + i;
+                })
+                const jsonStr = JSON.stringify(jsonObj);
+                const updateData = { art_configjson: jsonStr };
+                await this._updateOptionConfigRecord(this.code, updateData);
+            }
+            async _updateOptionConfigRecord(code, data) {
+                const record = await Xrm.WebApi.retrieveMultipleRecords("art_dynamicoptionsetconfig", `?$select=art_dynamicoptionsetconfigid&$filter=art_code eq '${code}'`)
+                    .then(response => {
+                        const count = response.entities.length;
+                        if (count == 0) {
+                            console.log(`[Error] no art_dynamicoptionsetconfig with code: ${code}.`);
+                            return {};
+                        }
+                        if (count > 1) {
+                            console.log(`[Warn] multiple(${count}) art_dynamicoptionsetconfig with code: ${code}.`);
+                        }
+                        return response.entities[0];
+                    })
+                const id = record.art_dynamicoptionsetconfigid;
+                await Xrm.WebApi.updateRecord("art_dynamicoptionsetconfig", id, data);
+            }
+            async upsertEntities(entities) {
+
+                async function upsertEntity(entity) {
+
+                }
+            }
+        }
+    }
+}
