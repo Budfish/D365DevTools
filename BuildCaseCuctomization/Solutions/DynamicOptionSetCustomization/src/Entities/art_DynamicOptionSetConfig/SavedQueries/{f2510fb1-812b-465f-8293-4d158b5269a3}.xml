@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{f2510fb1-812b-465f-8293-4d158b5269a3}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="art_name" select="1" icon="1" preview="1">
+        <row name="result" id="art_dynamicoptionsetconfigid">
+          <cell name="art_name" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="art_dynamicoptionsetconfig">
+          <attribute name="art_dynamicoptionsetconfigid" />
+          <attribute name="art_name" />
+          <attribute name="createdon" />
+          <order attribute="art_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="非使用中 DynamicOptionSetConfig" languagecode="1028" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

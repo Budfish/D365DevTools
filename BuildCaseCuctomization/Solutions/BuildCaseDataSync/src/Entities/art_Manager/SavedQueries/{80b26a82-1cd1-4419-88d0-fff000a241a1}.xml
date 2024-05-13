@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{80b26a82-1cd1-4419-88d0-fff000a241a1}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="art_name" select="1" icon="1" preview="1">
+        <row name="result" id="art_managerid">
+          <cell name="art_name" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="art_manager">
+          <attribute name="art_managerid" />
+          <attribute name="art_name" />
+          <attribute name="createdon" />
+          <order attribute="art_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="非使用中 經理人" languagecode="1028" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

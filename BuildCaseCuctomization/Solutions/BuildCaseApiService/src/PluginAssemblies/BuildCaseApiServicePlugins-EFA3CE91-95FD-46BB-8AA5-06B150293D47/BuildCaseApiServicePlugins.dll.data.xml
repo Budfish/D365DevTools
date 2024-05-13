@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="BuildCaseApiServicePlugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47d8043b23835288" PluginAssemblyId="efa3ce91-95fd-46bb-8aa5-06b150293d47" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <FileName>/PluginAssemblies/BuildCaseApiServicePlugins-EFA3CE91-95FD-46BB-8AA5-06B150293D47/BuildCaseApiServicePlugins.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="BuildCaseApiServicePlugins.Plugins.BuildCaseApiPlugin, BuildCaseApiServicePlugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47d8043b23835288" PluginTypeId="5dc7af5e-cf18-46e6-8cc8-203bee5d02e5" Name="BuildCaseApiServicePlugins.Plugins.BuildCaseApiPlugin">
+      <FriendlyName>63e92190-2977-489d-9630-597801296c6c</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="BuildCaseApiServicePlugins.Plugins.BuildCaseTokenPlugin, BuildCaseApiServicePlugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47d8043b23835288" PluginTypeId="2dc640b6-6512-4191-a66a-21f571b92aa4" Name="BuildCaseApiServicePlugins.Plugins.BuildCaseTokenPlugin">
+      <FriendlyName>2ea8bc3d-bb52-4f59-b6bd-9e06f34ca2d3</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>

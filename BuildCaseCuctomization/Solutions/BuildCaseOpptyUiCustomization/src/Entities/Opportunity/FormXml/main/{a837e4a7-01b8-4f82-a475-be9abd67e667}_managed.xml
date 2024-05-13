@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{a837e4a7-01b8-4f82-a475-be9abd67e667}</formid>
+    <IntroducedVersion>5.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form shownavigationbar="true" showImage="false" maxWidth="1920" headerdensity="HighWithControls" solutionaction="Modified">
+      <tabs>
+        <tab name="QUOTES" verticallayout="true" id="{af8380da-5492-4a69-8a36-b1beff121e95}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" ordinalvalue="2">
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="opportunityquotes" showlabel="false" showbar="false" id="{40e2e47e-716a-4fe8-9fc0-e0341303c7a3}" height="auto" IsUserDefined="0" layout="varheight" columns="11" ordinalvalue="0">
+                  <rows>
+                    <row>
+                      <cell colspan="2" rowspan="4" showlabel="false" auto="true" id="{dcb63b8d-f689-44b1-a009-292bff328340}" ordinalvalue="10000">
+                        <labels>
+                          <label description="動作卡" languagecode="1028" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <controlDescriptions>
+        <controlDescription forControl="{89cdfa42-12d4-4c8b-8a0d-009ce7e0332d}" solutionaction="Removed" />
+      </controlDescriptions>
+      <footer id="{459e580f-b1cc-4a35-8111-45b157bb3885}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left" solutionaction="Added">
+        <rows>
+          <row>
+            <cell id="{20a42e07-d892-45bd-9034-702a484234d3}" showlabel="false" ordinalvalue="10000">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+            </cell>
+            <cell id="{886fedb8-73ae-4f49-87fc-5dd8ede40e01}" showlabel="false" ordinalvalue="20001">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+            </cell>
+            <cell id="{32bca30d-357e-4ba6-9bbb-8064065194ac}" showlabel="false" ordinalvalue="30002">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+    </form>
+    <LocalizedNames>
+      <LocalizedName description="商機​​(原生)" languagecode="1028" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="更新的預設商機表單" languagecode="1028" />
+    </Descriptions>
+  </systemform>
+</forms>

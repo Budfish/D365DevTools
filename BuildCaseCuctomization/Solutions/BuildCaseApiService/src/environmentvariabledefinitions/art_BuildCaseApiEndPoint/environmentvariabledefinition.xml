@@ -1,0 +1,14 @@
+<environmentvariabledefinition schemaname="art_BuildCaseApiEndPoint">
+  <defaultvalue>https://&lt;server&gt;/GU8sGbwY9M42FdBx9tRF/ProjectCreation/</defaultvalue>
+  <description default="建案Api的EndPoint">
+    <label description="建案Api的EndPoint" languagecode="1028" />
+  </description>
+  <displayname default="BuildCaseApiEndPoint">
+    <label description="BuildCaseApiEndPoint" languagecode="1028" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

@@ -1,0 +1,16 @@
+rd /s /q .\DynamicOptionSetCustomization
+pac solution clone -n DynamicOptionSetCustomization
+
+rd /s /q .\BuildCaseApiService
+pac solution clone -n BuildCaseApiService
+
+rd /s /q .\BuildCaseDataSync
+pac solution clone -n BuildCaseDataSync
+
+rd /s /q .\BuildCaseOpptyProduct
+pac solution clone -n BuildCaseOpptyProduct
+
+rd /s /q .\BuildCaseOpptyUiCustomization
+pac solution clone -n BuildCaseOpptyUiCustomization
+
+

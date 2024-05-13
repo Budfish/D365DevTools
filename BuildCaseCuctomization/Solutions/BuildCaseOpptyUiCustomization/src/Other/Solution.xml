@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.24044.198" SolutionPackageVersion="9.2" languagecode="1028" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>BuildCaseOpptyUiCustomization</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="BuildCaseOpptyUiCustomization" languagecode="1028" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.0.0</Version>
+    <Managed>2</Managed>
+    <Publisher>
+      <UniqueName>ArtSolutions</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="ArtSolutions" languagecode="1028" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>art</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>75091</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="account" behavior="1" />
+      <RootComponent type="1" schemaName="opportunity" behavior="2" />
+      <RootComponent type="1" schemaName="systemuser" behavior="1" />
+      <RootComponent type="61" schemaName="art_OpportunityUiLibrary" behavior="0" />
+      <RootComponent type="9" schemaName="art_clientmember" behavior="0" />
+      <RootComponent type="9" schemaName="art_executionunit" behavior="0" />
+      <RootComponent type="9" schemaName="art_managermember" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="art_opptyproductcost" displayName="產品成本" solution="Active" />
+        <Dependent type="2" schemaName="art_annualcostrollup" displayName="執行期年度加總成本" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="art_opptyproductcost" displayName="產品成本" solution="Active" />
+        <Dependent type="2" schemaName="art_serviceincomerollup" displayName="服務收入總額" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="art_opptyproductcost" displayName="產品成本" solution="Active" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="competitor" displayName="競爭者" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="competitor" displayName="競爭者" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="1" schemaName="opportunity" displayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_annualcostrollup" displayName="執行期年度加總成本" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_annualcostrollup_base" displayName="執行期年度加總成本 (基準貨幣)" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_clientcategory" displayName="業主類別" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_clientname" displayName="業主名稱" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_contractamounttaxable" displayName="合約金額(應稅)" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_contractamounttaxable_base" displayName="合約金額(應稅) (基準貨幣)" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_contractclosurerate" displayName="簽約達成率" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_contractenddate" displayName="合約迄日" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_contractperiod" displayName="合約起迄" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_contractstartdate" displayName="合約起日" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_executionenddate" displayName="執行迄日" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_executionperiod" displayName="執行起迄" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_executionrate" displayName="執行期成本率" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_executionstartdate" displayName="執行起日" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_expectedbiddingdate" displayName="預計投標日" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_expectednegotiationdate" displayName="預計議價日" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_expectedsigningdate" displayName="預計簽約日" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_mainincome" displayName="收入總額 (Y)" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_mainincome_base" displayName="收入總額 (Y) (基準貨幣)" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_mainprodcost" displayName="商品成本 (Z)" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_mainprodcost_base" displayName="商品成本 (Z) (基準貨幣)" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_projectexecutionunit" displayName="專案執行單位" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_projectmanager" displayName="專案經理" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_projectnature" displayName="專案性質" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_salesmanager" displayName="業務經理" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_selfincome" displayName="收入總額 (AD)" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_selfincome_base" displayName="收入總額 (AD) (基準貨幣)" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_selfprodcost" displayName="自有產品成本 (AE)" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_selfprodcost_base" displayName="自有產品成本 (AE) (基準貨幣)" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_serviceincomerollup" displayName="服務收入總額" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_serviceincomerollup_base" displayName="服務收入總額 (基準貨幣)" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_signingparty" displayName="簽約對象" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_taxrate" displayName="稅率" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunityproduct" displayName="商機產品" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunityproduct" displayName="商機產品" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="quote" displayName="報價" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="quote" displayName="報價" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="art_opptyproductcost_Opportunity_opportunity" displayName="art_opptyproductcost_Opportunity_opportunity" parentSchemaName="opportunity" parentDisplayName="商機" solution="Active" />
+        <Dependent type="2" schemaName="art_annualcostrollup" displayName="執行期年度加總成本" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="art_opptyproductcost_Opportunity_opportunity" displayName="art_opptyproductcost_Opportunity_opportunity" parentSchemaName="opportunity" parentDisplayName="商機" solution="Active" />
+        <Dependent type="2" schemaName="art_serviceincomerollup" displayName="服務收入總額" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="art_directcost" displayName="直接成本 (人力成本+其他成本) (AL)" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" solution="Active" />
+        <Dependent type="2" schemaName="art_annualcostrollup" displayName="執行期年度加總成本" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="art_opportunity" displayName="來源商機" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" solution="Active" />
+        <Dependent type="2" schemaName="art_serviceincomerollup" displayName="服務收入總額" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="art_opptyproductcostid" displayName="產品成本" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" solution="Active" />
+        <Dependent type="2" schemaName="art_annualcostrollup" displayName="執行期年度加總成本" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="art_opptyproductcostid" displayName="產品成本" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" solution="Active" />
+        <Dependent type="2" schemaName="art_serviceincomerollup" displayName="服務收入總額" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="art_selfincome" displayName="收入總額 (AD)" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" solution="Active" />
+        <Dependent type="2" schemaName="art_serviceincomerollup" displayName="服務收入總額" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="budgetamount" displayName="預算金額" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="budgetamount" displayName="預算金額" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="currentsituation" displayName="目前情況" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="currentsituation" displayName="目前情況" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="customerneed" displayName="客戶需求" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="customerneed" displayName="客戶需求" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="description" displayName="描述" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="description" displayName="描述" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="discountamount" displayName="商機折扣金額" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="discountamount" displayName="商機折扣金額" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="discountpercentage" displayName="商機折扣 (%)" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="discountpercentage" displayName="商機折扣 (%)" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="estimatedclosedate" displayName="估計結案日期" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="estimatedclosedate" displayName="估計結案日期" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="estimatedvalue" displayName="估計營收" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="estimatedvalue" displayName="估計營收" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="freightamount" displayName="運費金額" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="freightamount" displayName="運費金額" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="isrevenuesystemcalculated" displayName="營收" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="isrevenuesystemcalculated" displayName="營收" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_forecastcategory" displayName="預測類別" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdyn_Forecasting (9.0.24031.10030)">
+          <package>msdyn_SalesIntegrationsAddOns (9.0.24043.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_forecastcategory" displayName="預測類別" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdyn_Forecasting (9.0.24031.10030)">
+          <package>msdyn_SalesIntegrationsAddOns (9.0.24043.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="name" displayName="專案名稱" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="name" displayName="專案名稱" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="opportunityid" displayName="商機" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="2" schemaName="art_executionrate" displayName="執行期成本率" parentSchemaName="opportunity" parentDisplayName="商機" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ownerid" displayName="Owner" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ownerid" displayName="Owner" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="parentaccountid" displayName="客戶" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="parentaccountid" displayName="客戶" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="parentbundleidref" displayName="上層搭售方案產品" parentSchemaName="opportunityproduct" parentDisplayName="商機產品" solution="msdynce_SalesPatch (9.0.1904.3002)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="parentbundleidref" displayName="上層搭售方案產品" parentSchemaName="opportunityproduct" parentDisplayName="商機產品" solution="msdynce_SalesPatch (9.0.1904.3002)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="parentcontactid" displayName="連絡人" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="parentcontactid" displayName="連絡人" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="pricelevelid" displayName="價目表" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="pricelevelid" displayName="價目表" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="proposedsolution" displayName="建議的解決方案" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="proposedsolution" displayName="建議的解決方案" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="purchaseprocess" displayName="購買方式" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="purchaseprocess" displayName="購買方式" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="purchasetimeframe" displayName="購買時間" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="purchasetimeframe" displayName="購買時間" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="totalamount" displayName="總計金額" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="totalamount" displayName="總計金額" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="totalamountlessfreight" displayName="折扣後金額總計" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="totalamountlessfreight" displayName="折扣後金額總計" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="totallineitemamount" displayName="明細總金額總計" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="totallineitemamount" displayName="明細總金額總計" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="totaltax" displayName="稅金總計" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="totaltax" displayName="稅金總計" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="transactioncurrencyid" displayName="貨幣" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="transactioncurrencyid" displayName="貨幣" parentSchemaName="opportunity" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Service" displayName="Service" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" solution="Active" id="{d77268e8-180d-ef11-9f89-6045bd5616ab}" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Service 人力" displayName="Service 人力" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" solution="Active" id="{ed9b2c44-e00c-ef11-9f8a-6045bd5880eb}" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="主力產品" displayName="主力產品" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" solution="Active" id="{df43e50f-390c-ef11-9f8a-6045bd5880eb}" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="自有產品" displayName="自有產品" parentSchemaName="art_opptyproductcost" parentDisplayName="產品成本" solution="Active" id="{97901d43-390c-ef11-9f89-6045bd5616ab}" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="所有競爭者 (摘要)" displayName="所有競爭者 (摘要)" parentSchemaName="competitor" parentDisplayName="競爭者" solution="msdynce_Sales (9.0.4.0076)" id="{57bca9ac-87a0-4c28-adc8-2d0a4645f29e}" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="所有競爭者 (摘要)" displayName="所有競爭者 (摘要)" parentSchemaName="competitor" parentDisplayName="競爭者" solution="msdynce_Sales (9.0.4.0076)" id="{57bca9ac-87a0-4c28-adc8-2d0a4645f29e}" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="商機產品內嵌編輯檢視" displayName="商機產品內嵌編輯檢視" parentSchemaName="opportunityproduct" parentDisplayName="商機產品" solution="msdynce_Sales (9.0.4.0076)" id="{01010de7-749e-4fe6-8037-aca560a4fcbe}" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="商機產品內嵌編輯檢視" displayName="商機產品內嵌編輯檢視" parentSchemaName="opportunityproduct" parentDisplayName="商機產品" solution="msdynce_Sales (9.0.4.0076)" id="{01010de7-749e-4fe6-8037-aca560a4fcbe}" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="商機產品內嵌編輯檢視：搭售方案產品" displayName="商機產品內嵌編輯檢視：搭售方案產品" parentSchemaName="opportunityproduct" parentDisplayName="商機產品" solution="msdynce_SalesPatch (9.0.1904.3002)" id="{e175dfbf-8eae-4af2-9dd2-68c43c14d40f}" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="商機產品內嵌編輯檢視：搭售方案產品" displayName="商機產品內嵌編輯檢視：搭售方案產品" parentSchemaName="opportunityproduct" parentDisplayName="商機產品" solution="msdynce_SalesPatch (9.0.1904.3002)" id="{e175dfbf-8eae-4af2-9dd2-68c43c14d40f}" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="商機報價" displayName="商機報價" parentSchemaName="quote" parentDisplayName="報價" solution="msdynce_Sales (9.0.4.0076)" id="{61a4c932-d775-e211-b420-00155d806600}" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="商機報價" displayName="商機報價" parentSchemaName="quote" parentDisplayName="報價" solution="msdynce_Sales (9.0.4.0076)" id="{61a4c932-d775-e211-b420-00155d806600}" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="商機​​(原生)" parentDisplayName="商機" solution="msdynce_Sales (9.0.4.0076)" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="art_DynamicOptionSetLibrary" displayName="art_DynamicOptionSetLibrary" solution="Active" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Forecasting/Opportunity/Opportunity_Forecast_MainSystemLibrary.js" displayName="Forecasting/Opportunity/Opportunity_Forecast_MainSystemLibrary.js" solution="msdyn_Forecasting (9.0.24031.10030)">
+          <package>msdyn_SalesIntegrationsAddOns (9.0.24043.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/ClientCommon/Sales_ClientCommon.js" displayName="Sales/ClientCommon/Sales_ClientCommon.js" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/Opportunity/Opportunity_main_system_library.js" displayName="Sales/Opportunity/Opportunity_main_system_library.js" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2404.4024)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.AcceleratedSales.CadenceWidgetControl" displayName="MscrmControls.AcceleratedSales.CadenceWidgetControl" solution="msdyn_acceleratedsales (9.1.24012.10007)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.AcceleratedSales.CadenceWidgetControl" displayName="MscrmControls.AcceleratedSales.CadenceWidgetControl" solution="msdyn_acceleratedsales (9.1.24012.10007)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2404.4024)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2404.4024)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.Grid.GridControl" displayName="MscrmControls.Grid.GridControl" solution="BaseCustomControlsCore (9.0.2404.4024)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.Grid.GridControl" displayName="MscrmControls.Grid.GridControl" solution="BaseCustomControlsCore (9.0.2404.4024)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.Grid.ReadOnlyGrid" displayName="MscrmControls.Grid.ReadOnlyGrid" solution="BaseCustomControlsCore (9.0.2404.4024)" />
+        <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.Grid.ReadOnlyGrid" displayName="MscrmControls.Grid.ReadOnlyGrid" solution="BaseCustomControlsCore (9.0.2404.4024)" />
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.RAContainer.RAControlv2" displayName="MscrmControls.RAContainer.RAControlv2" solution="RelationshipAnalytics (9.0.24043.10001)">
+          <package>msdynce_SalesInsightsAnchor (9.0.24043.10004)</package>
+        </Required>
+        <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>
