@@ -4,7 +4,7 @@ art.OpportunityRibbon = {
         const data = {
             "OptionCode": buttonName
         }
-        await this.action.syncDataFromScript(data, this);
+        await this.action.syncDataFromScript.bind()(data, this);
     },
     action: {
         callSyncBuildCaseOptionData: async function (data, self) {
@@ -123,13 +123,15 @@ art.OpportunityRibbon = {
                 optionValueBase: 0,
                 apiInputData: { action: "GetCustomer?DataType=CUSTOMER", inputParamStr: "" },
                 setupOptionConfig: async function (data) {
+                    this.upsertEntities(data)
 
                 }
             }
             DefaultSyncConfig = {
                 optionValueBase: 0,
                 apiInputData: { action: "", inputParamStr: "" },
-                setupOptionConfig: async function (data) { }
+                setupOptionConfig: async function (data) {
+                }
             }
             async _setupOptionConfig(data, nameField) {
                 const dataResult = data.dataResult;
@@ -158,10 +160,44 @@ art.OpportunityRibbon = {
                 const id = record.art_dynamicoptionsetconfigid;
                 await Xrm.WebApi.updateRecord("art_dynamicoptionsetconfig", id, data);
             }
-            async upsertEntities(entities) {
+            async upsertEntities(data) {
+                const record = await Xrm.WebApi.retrieveMultipleRecords("account", `?$select=accountid,art_datacode,name&$filter=art_datacode ne null`)
+                RepeatDataCodeUpdate(record, data)
+                NewDataCodeCreate(record, data)
 
-                async function upsertEntity(entity) {
 
+                async function RepeatDataCodeUpdate(record, data) {
+                    const updatePromises = [];
+                    data.dataResult.map(dataItem => {
+                        record.entities.forEach(recordItem => {
+                            if (recordItem.art_datacode === dataItem.dataCode && recordItem.name !== dataItem.dataName) {
+                                console.log('Update')
+                                const updatePromise = Xrm.WebApi.updateRecord("account", recordItem.accountid, { name: dataItem.dataName, art_datacode: dataItem.dataCode });
+                                updatePromises.push(updatePromise);
+                            }
+                        });
+                    });
+                    Promise.all(updatePromises);
+                }
+
+                async function NewDataCodeCreate() {
+                    const createPromises = [];
+                    data.dataResult.map(dataItem => {
+                        let isRepeat = false;
+                        for (let i = 0; i < record.entities.length; i++) {
+                            const recordItem = record.entities[i];
+                            if (recordItem.art_datacode === dataItem.dataCode) {
+                                isRepeat = true;
+                                break;
+                            }
+                        }
+                        if (isRepeat == false) {
+                            console.log('Create')
+                            const createPromise = Xrm.WebApi.createRecord("account", { name: dataItem.dataName, art_datacode: dataItem.dataCode })
+                            createPromises.push(createPromise);
+                        }
+                    });
+                    Promise.all(createPromises);
                 }
             }
         }

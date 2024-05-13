@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.24043.208" SolutionPackageVersion="9.2" languagecode="1028" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.24044.198" SolutionPackageVersion="9.2" languagecode="1028" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>BuildCaseOpptyUiCustomization</UniqueName>
     <LocalizedNames>
@@ -566,7 +566,7 @@
         <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2404.3020)" />
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2404.4024)" />
         <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
       </MissingDependency>
       <MissingDependency>
@@ -578,27 +578,27 @@
         <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2404.3020)" />
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2404.4024)" />
         <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2404.3020)" />
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2404.4024)" />
         <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.Grid.GridControl" displayName="MscrmControls.Grid.GridControl" solution="BaseCustomControlsCore (9.0.2404.3020)" />
+        <Required type="66" schemaName="MscrmControls.Grid.GridControl" displayName="MscrmControls.Grid.GridControl" solution="BaseCustomControlsCore (9.0.2404.4024)" />
         <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.Grid.GridControl" displayName="MscrmControls.Grid.GridControl" solution="BaseCustomControlsCore (9.0.2404.3020)" />
+        <Required type="66" schemaName="MscrmControls.Grid.GridControl" displayName="MscrmControls.Grid.GridControl" solution="BaseCustomControlsCore (9.0.2404.4024)" />
         <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.Grid.ReadOnlyGrid" displayName="MscrmControls.Grid.ReadOnlyGrid" solution="BaseCustomControlsCore (9.0.2404.3020)" />
+        <Required type="66" schemaName="MscrmControls.Grid.ReadOnlyGrid" displayName="MscrmControls.Grid.ReadOnlyGrid" solution="BaseCustomControlsCore (9.0.2404.4024)" />
         <Dependent type="60" displayName="商機" parentDisplayName="商機" id="{03143422-520b-ef11-9f89-000d3a809ff6}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.Grid.ReadOnlyGrid" displayName="MscrmControls.Grid.ReadOnlyGrid" solution="BaseCustomControlsCore (9.0.2404.3020)" />
+        <Required type="66" schemaName="MscrmControls.Grid.ReadOnlyGrid" displayName="MscrmControls.Grid.ReadOnlyGrid" solution="BaseCustomControlsCore (9.0.2404.4024)" />
         <Dependent type="60" displayName="商機​​(原生)" parentDisplayName="商機" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
       </MissingDependency>
       <MissingDependency>
