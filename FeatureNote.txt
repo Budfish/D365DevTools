@@ -17,3 +17,10 @@ custom control access
 
 description
 表單填寫權限控制模組
+
+==========
+feature_sdi
+sharepoint document integration
+
+description
+SharePoint檔案上傳元件
