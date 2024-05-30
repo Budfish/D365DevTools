@@ -1,0 +1,53 @@
+.art_pcf.DropzoneSection {
+    text-align: center;
+    height: calc(100% - 10px);
+}
+
+.art_pcf.DropzoneDiv {
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 10px;
+}
+
+.art_pcf.DropzoneDiv.active {
+    border-color: black;
+    cursor: pointer;
+}
+
+.art_pcf.DropzoneDiv.disabled {
+    background-color: #f2f2f2;
+    color: #cacaca;
+    border-color: #e0e0e0;
+    cursor: default;
+}
+
+.art_pcf.LinkDiv {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.art_pcf.LinkA {
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: "Segoe UI Regular", SegoeUI, "Segoe UI";
+    color: rgb(17, 96, 183);
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.art_pcf.LinkButton {
+    min-width: 45px;
+    margin-left: 5px;
+}
+
+.art_pcf.PreviewButton {
+    min-width: 45px;
+    margin-left: 5px;
+}

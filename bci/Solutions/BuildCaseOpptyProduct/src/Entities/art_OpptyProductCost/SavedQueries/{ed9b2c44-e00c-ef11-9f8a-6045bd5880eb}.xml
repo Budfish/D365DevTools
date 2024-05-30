@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{ed9b2c44-e00c-ef11-9f8a-6045bd5880eb}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="art_name" select="1" icon="1" preview="1">
+        <row name="result" id="art_opptyproductcostid">
+          <cell name="art_year" width="25" />
+          <cell name="art_band1" width="100" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="art_band2" width="100" />
+          <cell name="art_band3" width="100" />
+          <cell name="art_band4" width="100" />
+          <cell name="art_band5" width="110" />
+          <cell name="art_band6" width="110" />
+          <cell name="art_band7" width="110" />
+          <cell name="art_band8" width="110" />
+          <cell name="art_band9" width="110" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="art_opptyproductcost">
+          <attribute name="art_year" />
+          <attribute name="art_band1" />
+          <attribute name="art_band2" />
+          <attribute name="art_band3" />
+          <attribute name="art_band4" />
+          <attribute name="art_band5" />
+          <attribute name="art_band6" />
+          <attribute name="art_band7" />
+          <attribute name="art_band8" />
+          <attribute name="art_band9" />
+          <order attribute="art_year" descending="true" />
+          <attribute name="art_opptyproductcostid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Service 人力" languagecode="1028" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

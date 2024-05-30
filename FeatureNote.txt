@@ -1,0 +1,26 @@
+feature_sat
+scenario auto testing
+
+description
+建立PowerApp的自動化測試腳本
+
+==========
+feature_bci
+build case integration
+
+description
+建案系統串接POC
+
+==========
+feature_cca
+custom control access
+
+description
+表單填寫權限控制模組
+
+==========
+feature_sdi
+sharepoint document integration
+
+description
+SharePoint檔案上傳元件

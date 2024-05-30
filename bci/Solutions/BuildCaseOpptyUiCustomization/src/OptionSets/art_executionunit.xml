@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="art_executionunit" localizedName="執行單位" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="執行單位" languagecode="1028" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1028" />
+  </Descriptions>
+  <options>
+    <option value="750910000" ExternalValue="">
+      <labels>
+        <label description="智治一組" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910001" ExternalValue="">
+      <labels>
+        <label description="智治二組" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910002" ExternalValue="">
+      <labels>
+        <label description="財金一組" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910003" ExternalValue="">
+      <labels>
+        <label description="財金三組" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910004" ExternalValue="">
+      <labels>
+        <label description="科服一組" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910005" ExternalValue="">
+      <labels>
+        <label description="科服二組" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910006">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910007">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910008">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910009">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910010">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910011">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910012">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910013">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910014">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910015">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910016">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910017">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910018">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910019">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910020">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910021">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910022">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910023">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910024">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910025">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910026">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910027">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910028">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910029">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910030">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910031">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910032">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910033">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910034">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910035">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910036">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910037">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910038">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910039">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910040">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910041">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910042">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910043">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910044">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910045">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910046">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910047">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910048">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910049">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910050">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910051">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910052">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910053">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910054">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910055">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910056">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910057">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910058">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+    <option value="750910059">
+      <labels>
+        <label description="---" languagecode="1028" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1028" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>
