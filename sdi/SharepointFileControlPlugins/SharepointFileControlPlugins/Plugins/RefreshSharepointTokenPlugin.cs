@@ -13,6 +13,7 @@ namespace SharepointFileControlPlugins.Plugins
 {
     public class RefreshSharepointTokenPlugin : IPlugin
     {
+        private bool debug = false;
         private IPluginExecutionContext context;
         private IOrganizationService service;
         private ITracingService tracer;
@@ -23,11 +24,23 @@ namespace SharepointFileControlPlugins.Plugins
             service = serviceFactory.CreateOrganizationService(context.UserId);
             tracer = (ITracingService)serviceProvider.GetService(typeof(ITracingService));
             if (!context.InputParameters.Contains("Target") || !(context.InputParameters["Target"] is Entity)) return;
+            if (debug) tracer.Trace("RefreshSharepointTokenPlugin activated.");
 
             Entity target = context.InputParameters["Target"] as Entity;
+            if (debug) tracer.Trace($"target={target.LogicalName}({target.Id})");
             var connection = GetConnection();
+            if (debug) tracer.Trace($"connection.site_domain={connection.site_domain}");
+            if (debug) tracer.Trace($"connection.client_id={connection.client_id}");
+            if (debug) tracer.Trace($"connection.client_secret={connection.client_secret}");
+            if (debug) tracer.Trace($"connection.tenant_id={connection.tenant_id}");
             var request = new TokenApiRequestModel(connection);
+            if (debug) tracer.Trace($"request.source_url={request.source_url}");
+            if (debug) tracer.Trace($"request.grant_type={request.grant_type}");
+            if (debug) tracer.Trace($"request.client_id={request.client_id}");
+            if (debug) tracer.Trace($"request.client_secret={request.client_secret}");
+            if (debug) tracer.Trace($"request.resource={request.resource}");
             string token = GetToken(request);
+            if (debug) tracer.Trace($"token={token}");
             target["art_token"] = token;
         }
         private string GetToken(TokenApiRequestModel requestParam)
@@ -47,8 +60,15 @@ namespace SharepointFileControlPlugins.Plugins
 
                 HttpResponseMessage response = client.PostAsync(requestParam.source_url, formdata).Result;
                 string responseText = response.Content.ReadAsStringAsync().Result;
+                if (debug) tracer.Trace($"responseText={responseText}");
 
                 TokenApiResponseModel tokenResponse = JsonConvert.DeserializeObject<TokenApiResponseModel>(responseText);
+                if (debug) tracer.Trace($"tokenResponse.source_url={tokenResponse.token_type}");
+                if (debug) tracer.Trace($"tokenResponse.expires_in={tokenResponse.expires_in}");
+                if (debug) tracer.Trace($"tokenResponse.not_before={tokenResponse.not_before}");
+                if (debug) tracer.Trace($"tokenResponse.expires_on={tokenResponse.expires_on}");
+                if (debug) tracer.Trace($"tokenResponse.resource={tokenResponse.resource}");
+                if (debug) tracer.Trace($"tokenResponse.access_token={tokenResponse.access_token}");
                 token = tokenResponse.access_token;
             }
             return token;
