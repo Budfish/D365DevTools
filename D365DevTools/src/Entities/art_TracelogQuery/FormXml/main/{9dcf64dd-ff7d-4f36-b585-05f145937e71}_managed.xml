@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{9dcf64dd-ff7d-4f36-b585-05f145937e71}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{478a0e36-b167-4d33-a050-66f6bb73f4fc}" IsUserDefined="1" name="Basic">
+          <labels>
+            <label description="檢視記錄" languagecode="1028" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{7f31c2f2-7641-47e3-96d8-434b2d9edbfe}" name="Basic" visible="false">
+                  <labels>
+                    <label description="Basic" languagecode="1028" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{9f3277e6-a48b-4b83-8c8a-c17e09d12c34}">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                        <control id="art_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="art_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8a85ffc9-a629-4067-b2ab-55f4ee26da83}">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="QuerySetting" id="add129f5-1f7c-48f1-98f5-c63f613f3462" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="設定篩選" languagecode="1028" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{119b3101-a899-499c-b797-34f814c781d2}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                        <control id="art_createdafter" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="art_createdafter" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3601e735-173e-4bed-a80a-8d26ff77750e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                        <control id="art_createdbefore" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="art_createdbefore" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell rowspan="6" id="{c7c6cefd-6c3a-4e59-b157-2ca880b94fea}" showlabel="false" colspan="1">
+                        <labels>
+                          <label description="TracelogQuery.TypeNamePicker" languagecode="1028" />
+                        </labels>
+                        <control id="WebResource_TypeNamePicker" classid="{9FDF5F91-88B1-47F4-AD53-C11EFC01A01D}">
+                          <parameters>
+                            <Url>art_TracelogQueryTypeNamePicker</Url>
+                            <PassParameters>false</PassParameters>
+                            <Security>false</Security>
+                            <Scrolling>auto</Scrolling>
+                            <Border>false</Border>
+                            <ShowOnMobileClient>false</ShowOnMobileClient>
+                            <WebResourceId>{abdd0d23-301f-ef11-840a-6045bd1feb6a}</WebResourceId>
+                          </parameters>
+                        </control>
+                        <events>
+                          <event name="onload" application="false" active="false" />
+                        </events>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="Debug" id="5171e63a-a7af-4060-914e-a17602bdcd43" IsUserDefined="0" locklevel="0" showlabel="true" visible="false">
+          <labels>
+            <label description="Debug" languagecode="1028" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Configs" id="bf2304c6-917b-4e3d-836f-bc607a0ca215" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Configs" languagecode="1028" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{12b250c0-60f9-4f95-88bc-71837712bd8b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                        <control id="art_enableeditsetting" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="art_enableeditsetting" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{e9af3ee6-94c2-41c3-acdc-4509879ee16f}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{f166898c-854e-43d5-8bc4-e43b04fdbc13}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+            </cell>
+            <cell id="{454f5821-620e-4cc7-b679-cc10cc762f07}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+            </cell>
+            <cell id="{6bc11e8c-79ea-468c-b87d-3074d7df2c07}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+            </cell>
+            <cell id="{46d46a9c-ae11-4b85-8bb4-51ac09d928bc}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+              <control id="header_art_name" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="art_name" disabled="false" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{2e1d46e5-a8b7-4f06-afe6-4b962d9668ae}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{34c0f428-91da-4a8b-9d44-10efefa3b6a5}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+            </cell>
+            <cell id="{1d147f1f-a30a-4db7-8474-80289c3e8b03}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+            </cell>
+            <cell id="{50cc30f9-b2dd-4102-8471-79290a4d378a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1028" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+      <formLibraries>
+        <Library name="art_Common" libraryUniqueId="{15ac43c2-8e0b-4946-929f-2515d91b06e6}" />
+        <Library name="art_TracelogQueryLibrary" libraryUniqueId="{26d44342-90a5-4461-bee7-8986eb59de8f}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="art.Tracelog.onLoad" libraryName="art_Common" handlerUniqueId="{cb005c9f-b404-42dc-a618-12210ab49650}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="資訊" languagecode="1028" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="此實體的表單。" languagecode="1028" />
+    </Descriptions>
+  </systemform>
+</forms>

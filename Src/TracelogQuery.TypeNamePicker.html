@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeNamePicker</title>
+    <script src="./art_Common"></script>
+</head>
+
+<body onload="art.WebResource.registerCrmsdkOnload(['formContext', 'Xrm'], init)">
+
+</body>
+<script>
+    function init() {
+        const formContext = window.getFormContext();
+        const Xrm = window.getXrm();
+    }
+    async function retrieveLatestLogs() {
+
+    }
+    async function retrieveLogs(query) {
+        const logs = await Xrm.WebApi.retrieveMultipleRecords("plugintracelog", query).then(res => res.json())
+            .then(data => data.entities)
+            .catch(err => {
+                console.log(err);
+                return [];
+            })
+        return logs;
+    }
+</script>
+
+</html>
