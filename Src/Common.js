@@ -20,11 +20,10 @@ art.WebResource = {
             window.Xrm = Xrm;
         })
     },
-    registerCrmsdkOnload: function (sdkNames, callback) {
+    registerCrmsdkOnload: function (callback, sdkNames = ['formContext', 'Xrm']) {
         if (!Array.isArray(sdkNames)) sdkNames = [sdkNames];
         const sdks = sdkNames.filter(name => name != "").map(name => {
-            const capitalName = name[0].toUpperCase() + name.slice(1);
-            return { name: name, loaded: false, getSdkName: `get${capitalName}` };
+            return { name: name, _name: `_${name}`, loaded: false };
         })
         const loader = {
             executed: false,
@@ -37,9 +36,12 @@ art.WebResource = {
         for (let sdk of sdks) {
             Object.defineProperty(window, sdk.name, {
                 set: function (val) {
-                    this[sdk.getSdkName] = () => val;
+                    this[sdk._name] = val;
                     sdk.loaded = true;
                     loader.all = sdks.reduce((result, sdk) => result && sdk.loaded, true);
+                },
+                get: function () {
+                    return this[sdk._name];
                 }
             })
         }

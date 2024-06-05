@@ -8,13 +8,12 @@
     <script src="./art_Common"></script>
 </head>
 
-<body onload="art.WebResource.registerCrmsdkOnload(['formContext', 'Xrm'], init)">
+<body onload="art.WebResource.registerCrmsdkOnload(init)">
 
 </body>
 <script>
     function init() {
-        const formContext = window.getFormContext();
-        const Xrm = window.getXrm();
+        
     }
     async function retrieveLatestLogs() {
 
