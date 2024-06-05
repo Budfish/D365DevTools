@@ -9,14 +9,51 @@
 </head>
 
 <body onload="art.WebResource.registerCrmsdkOnload(init)">
+    <div data-desc="operation">
+        <div data-desc="refresh">
+            <button>重新整理</button>
+        </div>
+        <div data-desc="search">
+            <input type="text">
+            <button>搜尋</button>
+        </div>
+    </div>
+    <div data-desc="list">
 
+    </div>
+    <div data-desc="templates">
+        <div data-desc="template type" id="template_type">
+            <input type="checkbox" id="type_chk_{n}">
+            <span id="type_msg_{n}">messagename</span>
+            <span id="type_name_{n}">typename</span>
+        </div>
+    </div>
 </body>
 <script>
+    let typeNameList = [];
     function init() {
-        
+
+    }
+    function initTypeNameList() {
+        const querySetting = {};
+        querySetting.attr = formContext.getAttribute("art_querytypenames");
+        querySetting.json = querySetting.attr.getValue();
+        querySetting.obj = JSON.parse(querySetting.json);
+        typeNameList = querySetting.obj;
+    }
+    function appendTypeNameList(arr) {
+        const temp = typeNameList.concat(arr);
+        typeNameList = temp.filter((v, i, a) => i == a.indexOf(v));
+    }
+    async function retrieveLikeLogs(keyword) {
+        const query = "?$select=typename,messagename&$filter=contains(typename,'" + keyword + "')";
+        const logs = await retrieveLogs(query);
+        return logs;
     }
     async function retrieveLatestLogs() {
-
+        const query = "?$select=typename,messagename&$top=100&$orderby=createdon desc";
+        const logs = await retrieveLogs(query);
+        return logs;
     }
     async function retrieveLogs(query) {
         const logs = await Xrm.WebApi.retrieveMultipleRecords("plugintracelog", query).then(res => res.json())
