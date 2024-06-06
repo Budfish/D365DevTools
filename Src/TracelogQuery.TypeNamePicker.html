@@ -21,14 +21,78 @@
     <div data-desc="list">
 
     </div>
-    <div data-desc="templates">
-        <div data-desc="template type" id="template_type">
-            <input type="checkbox" id="type_chk_{n}">
-            <span id="type_msg_{n}">messagename</span>
-            <span id="type_name_{n}">typename</span>
+    <div data-desc="templates" id="template">
+        <div data-desc="template typename" id="template_typename_{n}">
+            <input type="checkbox" id="typename_chk_{n}">
+            <span id="typename_msg_{n}">messagename</span>
+            <span id="typename_name_{n}">typename</span>
         </div>
     </div>
 </body>
+<script>
+    class TypeNameElement {
+        static template = document.getElementById("template_typename_{n}");
+
+        // data properties
+        order;
+        checked;
+        typename;
+        messagename;
+
+        // dom properties
+        node;
+        checkInput;
+        messagenameSpan;
+        typenameSpan;
+
+        constructor(param) {
+            const { order, checked, typename, messagename } = param;
+            this.order = order;
+            this.checked = checked;
+            this.typename = typename;
+            this.messagename = messagename;
+            this.setupDomProp.bind(this)();
+        }
+        setupDomProp() {
+            const node = TypeNameElement.template.cloneNode(true);
+            const children = node.children;
+            const checkInput = children[0];
+            const messagenameSpan = children[1];
+            const typenameSpan = children[2];
+            this.node = node;
+            this.checkInput = checkInput;
+            this.messagenameSpan = messagenameSpan;
+            this.typenameSpan = typenameSpan
+            this.setupDomStyle.bind(this)();
+            this.setupDomId.bind(this)();
+            this.setupDomContent.bind(this)();
+            this.setupDomFunction.bind(this)();
+        }
+        setupDomStyle() {
+            this.node.style.order = this.order;
+        }
+        setupDomId() {
+            const order = this.order;
+            updateId(this.node);
+            updateId(this.checkInput);
+            updateId(this.messagenameSpan);
+            updateId(this.typenameSpan);
+
+            function updateId(elm) {
+                elm.id = elm.id.replace("{n}", order);
+            }
+        }
+        setupDomContent() {
+            if (this.checked) this.checkInput.setAttribute("checked", true);
+            this.checkInput.value = this.checked;
+            this.messagenameSpan.textContent = this.messagename;
+            this.typenameSpan.textContent = this.typename;
+        }
+        setupDomFunction() {
+            // todo
+        }
+    }
+</script>
 <script>
     let typeNameList = [];
     function init() {
