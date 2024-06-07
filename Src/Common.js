@@ -6,9 +6,12 @@ art.WebResource = {
     setupFormContext: async function (executionContext, webResourceName) {
         const formContext = executionContext.getFormContext();
         const webResource = formContext.getControl(webResourceName);
-        await webResource.getContentWindow().then(window => {
+        const registered = await webResource.getContentWindow().then(window => {
+            if (!window.crmsdkRegistered) return false;
             window.formContext = formContext;
+            return true;
         })
+        if (!registered) setTimeout(() => { this.setupFormContext(executionContext, webResourceName) }, 100);
     },
     requestSetupXrm: function (executionContext, webResourceName) {
         this.setupXrm(executionContext, webResourceName);
@@ -16,9 +19,12 @@ art.WebResource = {
     setupXrm: async function (executionContext, webResourceName) {
         const formContext = executionContext.getFormContext();
         const webResource = formContext.getControl(webResourceName);
-        await webResource.getContentWindow().then(window => {
+        const registered = await webResource.getContentWindow().then(window => {
+            if (!window.crmsdkRegistered) return false;
             window.Xrm = Xrm;
+            return true;
         })
+        if (!registered) setTimeout(() => { this.setupXrm(executionContext, webResourceName) }, 100);
     },
     registerCrmsdkOnload: function (callback, sdkNames = ['formContext', 'Xrm']) {
         if (!Array.isArray(sdkNames)) sdkNames = [sdkNames];
@@ -45,5 +51,6 @@ art.WebResource = {
                 }
             })
         }
+        window.crmsdkRegistered = true;
     },
 }
