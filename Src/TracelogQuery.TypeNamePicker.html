@@ -20,7 +20,7 @@
             <button>重新整理</button>
         </div>
         <div data-desc="search">
-            <input type="text">
+            <input type="text" id="typename_search">
             <button>搜尋</button>
         </div>
     </div>
@@ -38,7 +38,8 @@
 <script>
     class TypeNameElement {
         static list = [];
-        static template = document.getElementById("template_typename_{n}");
+        static listNode = document.getElementById("typename_list");
+        static templateNode = document.getElementById("template_typename_{n}");
         static refreshOrder = () => {
             let reorderedList = TypeNameElement.list.sort(byCheckByName);
             reorderedList = reorderedList.map(indexedOrder);
@@ -61,6 +62,19 @@
                 const _v = v;
                 _v.order = i;
                 return _v;
+            }
+        }
+        static upsertList = (params) => {
+            for (let param of params) {
+                const typename = new TypeNameElement(param);
+                typename.upsertList();
+            }
+            TypeNameElement.refreshOrder();
+            TypeNameElement.updateDom();
+        }
+        static updateDom = () => {
+            for (let typename of TypeNameElement.list) {
+                TypeNameElement.listNode.appendChild(typename.node);
             }
         }
 
@@ -93,7 +107,7 @@
             }
         }
         setupDomProp = () => {
-            const node = TypeNameElement.template.cloneNode(true);
+            const node = TypeNameElement.templateNode.cloneNode(true);
             const children = node.children;
             const checkInput = children[0];
             const messagenameSpan = children[1];
@@ -140,18 +154,48 @@
 </script>
 <script>
     function init() {
-
+        setupCurrentQueryTypenames();
+        addLatestLogTypenameOptions();
     }
-    function initTypeNameList() {
+    function setupCurrentQueryTypenames() {
         const querySetting = {};
         querySetting.attr = formContext.getAttribute("art_querytypenames");
         querySetting.json = querySetting.attr.getValue();
-        querySetting.obj = JSON.parse(querySetting.json);
-        typeNameList = querySetting.obj;
+        querySetting.obj = querySetting.json ? JSON.parse(querySetting.json) : [];
+        querySetting.params = querySetting.obj.map(objToParams);
+        TypeNameElement.upsertList(querySetting.params);
+
+        function objToParams(v, i, a) {
+            const _p = {};
+            _p.order = i;
+            _p.checked = true;
+            _p.typename = v;
+            return _p;
+        }
     }
-    function appendTypeNameList(arr) {
-        const temp = typeNameList.concat(arr);
-        typeNameList = temp.filter((v, i, a) => i == a.indexOf(v));
+    async function addSearchLogTypenameOptions() {
+        const typename_search = document.getElementById("typename_search");
+        const logs = await retrieveLikeLogs(typename_search.value);
+        addLogTypenameOptions(logs);
+    }
+    async function addLatestLogTypenameOptions() {
+        const logs = await retrieveLatestLogs();
+        addLogTypenameOptions(logs);
+    }
+    function addLogTypenameOptions(logs) {
+        const params = logs.map(logToParams);
+        TypeNameElement.upsertList(params);
+
+        function logToParams(log, i, a) {
+            const index = TypeNameElement.list.map(e => e.typename).indexOf(log.typename);
+            if (index != -1) return TypeNameElement.list[index];
+
+            const _p = {};
+            _p.order = i;
+            _p.typename = log.typename;
+            _p.checked = false;
+            return _p;
+        }
     }
     async function retrieveLikeLogs(keyword) {
         const query = "?$select=typename,messagename&$filter=contains(typename,'" + keyword + "')";
@@ -164,7 +208,7 @@
         return logs;
     }
     async function retrieveLogs(query) {
-        const logs = await Xrm.WebApi.retrieveMultipleRecords("plugintracelog", query).then(res => res.json())
+        const logs = await Xrm.WebApi.retrieveMultipleRecords("plugintracelog", query)
             .then(data => data.entities)
             .catch(err => {
                 console.log(err);
