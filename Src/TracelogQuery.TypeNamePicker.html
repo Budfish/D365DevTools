@@ -73,6 +73,9 @@
             TypeNameElement.updateDom();
         }
         static updateDom = () => {
+            while (TypeNameElement.listNode.firstElementChild) {
+                TypeNameElement.listNode.firstElementChild.remove();
+            }
             for (let typename of TypeNameElement.list) {
                 TypeNameElement.listNode.appendChild(typename.node);
             }
@@ -147,6 +150,8 @@
             this.checkInput.addEventListener('change', () => {
                 this.checked = this.checkInput.checked;
                 TypeNameElement.refreshOrder();
+                const checkedStr = JSON.stringify(TypeNameElement.list.filter(t => t.checked).map(t => t.typename));
+                formContext.getAttribute("art_querytypenames").setValue(checkedStr);
             })
         }
 
