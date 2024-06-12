@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogViewer</title>
+    <script src="./art_Common"></script>
+</head>
+
+<body onload="art.WebResource.registerCrmsdkOnload(init)">
+
+</body>
+<script>
+    function init() {
+
+    }
+    async function retrieveLogsByTypename() {
+        const querySetting = {};
+        querySetting.attr = formContext.getAttribute("art_querytypenames");
+        querySetting.json = querySetting.attr.getValue();
+        querySetting.obj = querySetting.json ? JSON.parse(querySetting.json) : [];
+        const query =
+            "?$select=performanceexecutionstarttime,messageblock,exceptiondetails" +
+            "&$orderby=performanceexecutionstarttime desc" +
+            "&$filter=(" + querySetting.obj.map(t => `typename eq '${t}'`).join(" or ") + ")"
+        const logs = await retrieveLogs(query);
+        return logs;
+    }
+    async function retrieveLogs(query) {
+        const logs = await Xrm.WebApi.retrieveMultipleRecords("plugintracelog", query)
+            .then(data => data.entities)
+            .catch(err => {
+                console.log(err);
+                return [];
+            })
+        return logs;
+    }
+</script>
+
+</html>
