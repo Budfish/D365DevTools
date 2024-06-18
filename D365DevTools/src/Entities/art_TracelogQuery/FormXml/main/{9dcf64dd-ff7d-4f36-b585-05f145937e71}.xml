@@ -112,6 +112,22 @@
                         <control id="art_enableeditsetting" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="art_enableeditsetting" disabled="false" />
                       </cell>
                     </row>
+                    <row>
+                      <cell id="{1bcbbcc9-a256-4878-afd5-87ebf5103198}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="QueryTypenames" languagecode="1028" />
+                        </labels>
+                        <control id="art_querytypenames" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="art_querytypenames" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0a13a3f4-cf5a-4e9a-90c8-fae248ce19fb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="QuerySetting" languagecode="1028" />
+                        </labels>
+                        <control id="art_querysetting" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="art_querysetting" disabled="false" />
+                      </cell>
+                    </row>
                   </rows>
                 </section>
               </sections>

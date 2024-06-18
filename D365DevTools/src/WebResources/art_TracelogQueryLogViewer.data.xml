@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <WebResourceId>{1e1e9105-0323-ef11-840a-6045bd1feb6a}</WebResourceId>
-  <Name>art_TracelogQueryLibrary</Name>
-  <DisplayName>TracelogQueryLibrary</DisplayName>
-  <LanguageCode>0</LanguageCode>
-  <WebResourceType>3</WebResourceType>
+  <WebResourceId>{ff92ca7c-462d-ef11-840a-0022485a6419}</WebResourceId>
+  <Name>art_TracelogQueryLogViewer</Name>
+  <DisplayName>TracelogQueryLogViewer</DisplayName>
+  <WebResourceType>1</WebResourceType>
   <IntroducedVersion>1.0.0.0</IntroducedVersion>
   <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
   <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
   <IsCustomizable>1</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/art_TracelogQueryLibrary1E1E9105-0323-EF11-840A-6045BD1FEB6A</FileName>
+  <FileName>/WebResources/art_TracelogQueryLogViewerFF92CA7C-462D-EF11-840A-0022485A6419</FileName>
 </WebResource>

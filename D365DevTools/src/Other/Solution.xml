@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.24052.188" SolutionPackageVersion="9.2" languagecode="1028" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.24054.188" SolutionPackageVersion="9.2" languagecode="1028" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>D365DevTools</UniqueName>
     <LocalizedNames>
@@ -19,7 +19,7 @@
       <EMailAddress xsi:nil="true"></EMailAddress>
       <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
       <CustomizationPrefix>art</CustomizationPrefix>
-      <CustomizationOptionValuePrefix>75091</CustomizationOptionValuePrefix>
+      <CustomizationOptionValuePrefix>91423</CustomizationOptionValuePrefix>
       <Addresses>
         <Address>
           <AddressNumber>1</AddressNumber>
@@ -83,6 +83,7 @@
       <RootComponent type="1" schemaName="art_tracelogquery" behavior="0" />
       <RootComponent type="61" schemaName="art_Common" behavior="0" />
       <RootComponent type="61" schemaName="art_TracelogQueryLibrary" behavior="0" />
+      <RootComponent type="61" schemaName="art_TracelogQueryLogViewer" behavior="0" />
       <RootComponent type="61" schemaName="art_TracelogQueryTypeNamePicker" behavior="0" />
       <RootComponent type="62" schemaName="art_D365DevTools" behavior="0" />
       <RootComponent type="80" schemaName="art_D365DevTools" behavior="0" />

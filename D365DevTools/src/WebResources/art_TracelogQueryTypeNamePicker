@@ -6,21 +6,214 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TypeNamePicker</title>
     <script src="./art_Common"></script>
+    <style>
+        #typename_list {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
 
-<body onload="art.WebResource.registerCrmsdkOnload(['formContext', 'Xrm'], init)">
+<body onload="art.WebResource.registerCrmsdkOnload(init)">
+    <div data-desc="operation">
+        <div data-desc="refresh">
+            <button>重新整理</button>
+        </div>
+        <div data-desc="search">
+            <input type="text" id="typename_search">
+            <button>搜尋</button>
+        </div>
+    </div>
+    <div data-desc="list" id="typename_list">
 
+    </div>
+    <div data-desc="templates" id="template" style="display: none;">
+        <div data-desc="template typename" id="template_typename_{n}">
+            <input type="checkbox" id="typename_chk_{n}">
+            <span id="typename_msg_{n}">messagename</span>
+            <span id="typename_name_{n}">typename</span>
+        </div>
+    </div>
 </body>
 <script>
-    function init() {
-        const formContext = window.getFormContext();
-        const Xrm = window.getXrm();
-    }
-    async function retrieveLatestLogs() {
+    class TypeNameElement {
+        static list = [];
+        static listNode = document.getElementById("typename_list");
+        static templateNode = document.getElementById("template_typename_{n}");
+        static refreshOrder = () => {
+            let reorderedList = TypeNameElement.list.sort(byCheckByName);
+            reorderedList = reorderedList.map(indexedOrder);
+            for (let t of reorderedList) {
+                t.upsertList();
+                t.setupDomUi();
+            }
+
+            function byName(a, b) {
+                if (a?.typename < b?.typename) return -1;
+                if (a?.typename > b?.typename) return 1;
+                return 0;
+            }
+            function byCheckByName(a, b) {
+                if (a?.checked > b?.checked) return -1;
+                if (a?.checked < b?.checked) return 1;
+                return byName(a, b);
+            }
+            function indexedOrder(v, i, a) {
+                const _v = v;
+                _v.order = i;
+                return _v;
+            }
+        }
+        static upsertList = (params) => {
+            for (let param of params) {
+                const typename = new TypeNameElement(param);
+                typename.upsertList();
+            }
+            TypeNameElement.refreshOrder();
+            TypeNameElement.updateDom();
+        }
+        static updateDom = () => {
+            while (TypeNameElement.listNode.firstElementChild) {
+                TypeNameElement.listNode.firstElementChild.remove();
+            }
+            for (let typename of TypeNameElement.list) {
+                TypeNameElement.listNode.appendChild(typename.node);
+            }
+        }
+
+        // data properties
+        order;
+        checked;
+        typename;
+        messagename;
+
+        // dom properties
+        node;
+        checkInput;
+        messagenameSpan;
+        typenameSpan;
+
+        constructor(param) {
+            const { order, checked, typename, messagename } = param;
+            this.order = order;
+            this.checked = checked;
+            this.typename = typename;
+            this.messagename = messagename;
+            this.setupDomProp();
+        }
+        upsertList = () => {
+            const index = TypeNameElement.list.map(e => e.typename).indexOf(this.typename);
+            if (index == -1) {
+                TypeNameElement.list.push(this);
+            } else {
+                TypeNameElement.list[index] = this;
+            }
+        }
+        setupDomProp = () => {
+            const node = TypeNameElement.templateNode.cloneNode(true);
+            const children = node.children;
+            const checkInput = children[0];
+            const messagenameSpan = children[1];
+            const typenameSpan = children[2];
+            this.node = node;
+            this.checkInput = checkInput;
+            this.messagenameSpan = messagenameSpan;
+            this.typenameSpan = typenameSpan
+            this.setupDomUi();
+            this.setupDomId();
+            this.setupDomFunction();
+        }
+        setupDomId = () => {
+            const order = this.order;
+            updateId(this.node);
+            updateId(this.checkInput);
+            updateId(this.messagenameSpan);
+            updateId(this.typenameSpan);
+
+            function updateId(elm) {
+                elm.id = elm.id.replace("{n}", order);
+            }
+        }
+        setupDomUi = () => {
+            this.setupDomStyle();
+            this.setupDomContent();
+        }
+        setupDomStyle = () => {
+            this.node.style.order = this.order;
+        }
+        setupDomContent = () => {
+            if (this.checked) this.checkInput.setAttribute("checked", true);
+            this.messagenameSpan.textContent = this.messagename;
+            this.typenameSpan.textContent = this.typename;
+        }
+        setupDomFunction = () => {
+            this.checkInput.addEventListener('change', () => {
+                this.checked = this.checkInput.checked;
+                TypeNameElement.refreshOrder();
+                const checkedStr = JSON.stringify(TypeNameElement.list.filter(t => t.checked).map(t => t.typename));
+                formContext.getAttribute("art_querytypenames").setValue(checkedStr);
+            })
+        }
 
     }
+</script>
+<script>
+    function init() {
+        setupCurrentQueryTypenames();
+        addLatestLogTypenameOptions();
+    }
+    function setupCurrentQueryTypenames() {
+        const querySetting = {};
+        querySetting.attr = formContext.getAttribute("art_querytypenames");
+        querySetting.json = querySetting.attr.getValue();
+        querySetting.obj = querySetting.json ? JSON.parse(querySetting.json) : [];
+        querySetting.params = querySetting.obj.map(objToParams);
+        TypeNameElement.upsertList(querySetting.params);
+
+        function objToParams(v, i, a) {
+            const _p = {};
+            _p.order = i;
+            _p.checked = true;
+            _p.typename = v;
+            return _p;
+        }
+    }
+    async function addSearchLogTypenameOptions() {
+        const typename_search = document.getElementById("typename_search");
+        const logs = await retrieveLikeLogs(typename_search.value);
+        addLogTypenameOptions(logs);
+    }
+    async function addLatestLogTypenameOptions() {
+        const logs = await retrieveLatestLogs();
+        addLogTypenameOptions(logs);
+    }
+    function addLogTypenameOptions(logs) {
+        const params = logs.map(logToParams);
+        TypeNameElement.upsertList(params);
+
+        function logToParams(log, i, a) {
+            const index = TypeNameElement.list.map(e => e.typename).indexOf(log.typename);
+            if (index != -1) return TypeNameElement.list[index];
+
+            const _p = {};
+            _p.order = i;
+            _p.typename = log.typename;
+            _p.checked = false;
+            return _p;
+        }
+    }
+    async function retrieveLikeLogs(keyword) {
+        const query = "?$select=typename,messagename&$filter=contains(typename,'" + keyword + "')";
+        const logs = await retrieveLogs(query);
+        return logs;
+    }
+    async function retrieveLatestLogs() {
+        const query = "?$select=typename,messagename&$top=100&$orderby=createdon desc";
+        const logs = await retrieveLogs(query);
+        return logs;
+    }
     async function retrieveLogs(query) {
-        const logs = await Xrm.WebApi.retrieveMultipleRecords("plugintracelog", query).then(res => res.json())
+        const logs = await Xrm.WebApi.retrieveMultipleRecords("plugintracelog", query)
             .then(data => data.entities)
             .catch(err => {
                 console.log(err);

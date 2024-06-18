@@ -237,6 +237,45 @@
             <Description description="" languagecode="1028" />
           </Descriptions>
         </attribute>
+        <attribute PhysicalName="art_QueryTypenames">
+          <Type>ntext</Type>
+          <Name>art_querytypenames</Name>
+          <LogicalName>art_querytypenames</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>text</Format>
+          <MaxLength>100000</MaxLength>
+          <displaynames>
+            <displayname description="QueryTypenames" languagecode="1028" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1028" />
+          </Descriptions>
+        </attribute>
         <attribute PhysicalName="art_TracelogQueryId">
           <Type>primarykey</Type>
           <Name>art_tracelogqueryid</Name>
@@ -791,7 +830,7 @@
               <Description description="TracelogQuery的狀態" languagecode="1028" />
             </Descriptions>
             <states>
-              <state value="0" defaultstatus="1" invariantname="Active">
+              <state value="0" defaultstatus="750910001" invariantname="Active">
                 <labels>
                   <label description="使用中" languagecode="1028" />
                 </labels>
@@ -860,6 +899,14 @@
                 <labels>
                   <label description="非使用中" languagecode="1028" />
                 </labels>
+              </status>
+              <status value="750910001" state="0">
+                <labels>
+                  <label description="編輯中" languagecode="1028" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="1028" />
+                </Descriptions>
               </status>
             </statuses>
           </optionset>

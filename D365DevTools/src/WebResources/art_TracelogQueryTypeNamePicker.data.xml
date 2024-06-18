@@ -2,7 +2,7 @@
 <WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <WebResourceId>{abdd0d23-301f-ef11-840a-6045bd1feb6a}</WebResourceId>
   <Name>art_TracelogQueryTypeNamePicker</Name>
-  <DisplayName>TracelogQuery.TypeNamePicker</DisplayName>
+  <DisplayName>TracelogQueryTypeNamePicker</DisplayName>
   <LanguageCode>0</LanguageCode>
   <WebResourceType>1</WebResourceType>
   <IntroducedVersion>1.0.0.0</IntroducedVersion>
