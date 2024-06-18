@@ -1,7 +1,8 @@
 var art = art || {};
 art.Tracelog = {
     onLoad: async function (executionContext) {
-        await art.WebResource.setupFormContext(executionContext, "WebResource_TypeNamePicker");
-        await art.WebResource.setupXrm(executionContext, "WebResource_TypeNamePicker");
+        const formContext = executionContext.getFormContext();
+        await art.WebResource.setupFormContext(formContext, "WebResource_TypeNamePicker");
+        await art.WebResource.setupXrm(formContext, "WebResource_TypeNamePicker");
     }
 }

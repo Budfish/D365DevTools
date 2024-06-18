@@ -1,10 +1,9 @@
 var art = art || {};
 art.WebResource = {
-    requestSetupFormContext: function (executionContext, webResourceName) {
-        this.setupFormContext(executionContext, webResourceName);
+    requestSetupFormContext: function (formContext, webResourceName) {
+        this.setupFormContext(formContext, webResourceName);
     },
-    setupFormContext: async function (executionContext, webResourceName) {
-        const formContext = executionContext.getFormContext();
+    setupFormContext: async function (formContext, webResourceName) {
         const webResource = formContext.getControl(webResourceName);
         const registered = await webResource.getContentWindow().then(window => {
             if (!window.crmsdkRegistered) return false;
@@ -13,11 +12,10 @@ art.WebResource = {
         })
         if (!registered) setTimeout(() => { this.setupFormContext(executionContext, webResourceName) }, 100);
     },
-    requestSetupXrm: function (executionContext, webResourceName) {
-        this.setupXrm(executionContext, webResourceName);
+    requestSetupXrm: function (formContext, webResourceName) {
+        this.setupXrm(formContext, webResourceName);
     },
-    setupXrm: async function (executionContext, webResourceName) {
-        const formContext = executionContext.getFormContext();
+    setupXrm: async function (formContext, webResourceName) {
         const webResource = formContext.getControl(webResourceName);
         const registered = await webResource.getContentWindow().then(window => {
             if (!window.crmsdkRegistered) return false;
