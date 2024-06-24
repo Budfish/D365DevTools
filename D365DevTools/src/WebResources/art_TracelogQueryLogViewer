@@ -7,13 +7,32 @@
     <title>LogViewer</title>
     <script src="./art_Common"></script>
 </head>
-
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
 <body onload="art.WebResource.registerCrmsdkOnload(init)">
-
+    <div>
+        <h2>追蹤程序紀錄</h2>
+        <table id="logsTable" style="width: 100%;">
+            <thead>
+                <tr>
+                    <th style="width: 10%;">執行開始時間</th>
+                    <th style="width: 45%;">消息塊</th>
+                    <th style="width: 45%;">異常詳情</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- JavaScript 將在這裡動態添加行 -->
+            </tbody>
+        </table>
+    </div>
 </body>
 <script>
-    function init() {
-
+    async function init() {
+        const logs = await retrieveLogsByTypename();
+        populateTable(logs); // 假設 logs 是一個包含你查詢到的物件的數組
     }
     async function retrieveLogsByTypename() {
         const querySetting = {};
@@ -35,6 +54,27 @@
                 return [];
             })
         return logs;
+    }
+    function populateTable(logs) {
+        const tableBody = document.getElementById('logsTable').getElementsByTagName('tbody')[0];
+
+        logs.forEach(log => {
+            const row = document.createElement('tr');
+
+            const startTimeCell = document.createElement('td');
+            startTimeCell.textContent = log["performanceexecutionstarttime@OData.Community.Display.V1.FormattedValue"];
+            row.appendChild(startTimeCell);
+
+            const messageBlockCell = document.createElement('td');
+            messageBlockCell.innerHTML = "<p>" + log.messageblock.replace(/\r\n|\r|\n/g, "<br>") + "</p>";
+            row.appendChild(messageBlockCell);
+
+            const exceptionDetailsCell = document.createElement('td');
+            exceptionDetailsCell.textContent = log.exceptiondetails;
+            row.appendChild(exceptionDetailsCell);
+
+            tableBody.appendChild(row);
+        });
     }
 </script>
 

@@ -37,7 +37,7 @@
                     </row>
                   </rows>
                 </section>
-                <section name="QuerySetting" id="add129f5-1f7c-48f1-98f5-c63f613f3462" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                <section name="QuerySetting" id="add129f5-1f7c-48f1-98f5-c63f613f3462" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="false">
                   <labels>
                     <label description="設定篩選" languagecode="1028" />
                   </labels>
@@ -73,6 +73,40 @@
                             <Border>false</Border>
                             <ShowOnMobileClient>false</ShowOnMobileClient>
                             <WebResourceId>{abdd0d23-301f-ef11-840a-6045bd1feb6a}</WebResourceId>
+                          </parameters>
+                        </control>
+                        <events>
+                          <event name="onload" application="false" active="false" />
+                        </events>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="TracelogSection" id="1e2e4f09-8fe0-4ba2-9bff-90a11a468960" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="新區段" languagecode="1028" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell rowspan="6" id="{603a480b-9ddb-4525-91f7-806245cacc61}" showlabel="false" colspan="1">
+                        <labels>
+                          <label description="TracelogQueryLogViewer" languagecode="1028" />
+                        </labels>
+                        <control id="WebResource_TracelogQueryLog" classid="{9FDF5F91-88B1-47F4-AD53-C11EFC01A01D}">
+                          <parameters>
+                            <Url>art_TracelogQueryLogViewer</Url>
+                            <PassParameters>false</PassParameters>
+                            <Security>false</Security>
+                            <Scrolling>auto</Scrolling>
+                            <Border>false</Border>
+                            <ShowOnMobileClient>false</ShowOnMobileClient>
+                            <WebResourceId>{ff92ca7c-462d-ef11-840a-0022485a6419}</WebResourceId>
                           </parameters>
                         </control>
                         <events>

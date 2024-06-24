@@ -3,6 +3,7 @@
   <WebResourceId>{ff92ca7c-462d-ef11-840a-0022485a6419}</WebResourceId>
   <Name>art_TracelogQueryLogViewer</Name>
   <DisplayName>TracelogQueryLogViewer</DisplayName>
+  <LanguageCode>0</LanguageCode>
   <WebResourceType>1</WebResourceType>
   <IntroducedVersion>1.0.0.0</IntroducedVersion>
   <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
