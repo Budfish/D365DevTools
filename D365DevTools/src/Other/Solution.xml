@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.24054.188" SolutionPackageVersion="9.2" languagecode="1028" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.24061.186" SolutionPackageVersion="9.2" languagecode="1028" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>D365DevTools</UniqueName>
     <LocalizedNames>
@@ -19,7 +19,7 @@
       <EMailAddress xsi:nil="true"></EMailAddress>
       <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
       <CustomizationPrefix>art</CustomizationPrefix>
-      <CustomizationOptionValuePrefix>91423</CustomizationOptionValuePrefix>
+      <CustomizationOptionValuePrefix>75091</CustomizationOptionValuePrefix>
       <Addresses>
         <Address>
           <AddressNumber>1</AddressNumber>
@@ -80,13 +80,18 @@
       </Addresses>
     </Publisher>
     <RootComponents>
+      <RootComponent type="1" schemaName="art_exceptionlogs" behavior="0" />
       <RootComponent type="1" schemaName="art_tracelogquery" behavior="0" />
+      <RootComponent type="29" id="{aa4d924a-a82e-ef11-840a-6045bd1c9f6c}" behavior="0" />
       <RootComponent type="61" schemaName="art_Common" behavior="0" />
+      <RootComponent type="61" schemaName="art_ExceptionHandlerLibrary" behavior="0" />
       <RootComponent type="61" schemaName="art_TracelogQueryLibrary" behavior="0" />
       <RootComponent type="61" schemaName="art_TracelogQueryLogViewer" behavior="0" />
       <RootComponent type="61" schemaName="art_TracelogQueryTypeNamePicker" behavior="0" />
       <RootComponent type="62" schemaName="art_D365DevTools" behavior="0" />
       <RootComponent type="80" schemaName="art_D365DevTools" behavior="0" />
+      <RootComponent type="91" id="{ea71c0dc-4125-4ec9-bc59-5e3cd770d4de}" schemaName="ExceptionLogPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4c67a975106416fe" behavior="0" />
+      <RootComponent type="92" id="{8c982594-aa2e-ef11-840a-6045bd1c9f6c}" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>

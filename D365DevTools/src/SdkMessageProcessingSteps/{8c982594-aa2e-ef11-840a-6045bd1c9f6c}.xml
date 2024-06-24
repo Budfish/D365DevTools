@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="ExceptionLogPlugin.LogException: art_LogException of any Entity" SdkMessageProcessingStepId="{8c982594-aa2e-ef11-840a-6045bd1c9f6c}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>ae4d924a-a82e-ef11-840a-6045bd1c9f6c</SdkMessageId>
+  <PluginTypeName>ExceptionLogPlugin.LogException, ExceptionLogPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4c67a975106416fe</PluginTypeName>
+  <PluginTypeId>4d9bb06b-6d0c-44fb-81ae-b098f82f10ec</PluginTypeId>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>ExceptionLogPlugin.LogException: art_LogException of any Entity</Description>
+  <FilteringAttributes></FilteringAttributes>
+  <InvocationSource>0</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>1</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>10</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

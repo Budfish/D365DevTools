@@ -12,3 +12,6 @@ SharepointFileControl/SharepointFileControlPlugins/.vs/
 SharepointFileControl/SharepointFileControlPlugins/packages/
 SharepointFileControl/SharepointFileControlPlugins/SharepointFileControlPlugins/bin/
 SharepointFileControl/SharepointFileControlPlugins/SharepointFileControlPlugins/obj/
+Src/ExceptionLogPlugin/ExceptionLogPlugin/bin/
+Src/ExceptionLogPlugin/ExceptionLogPlugin/obj/
+Src/ExceptionLogPlugin/packages/

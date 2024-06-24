@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{892e9ddd-14a5-4df4-9ffa-649069b7bda9}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab name="general" verticallayout="true" id="{df2183f0-a7c4-456f-9e18-e09034c85044}" IsUserDefined="0">
+          <labels>
+            <label description="" languagecode="1028" />
+          </labels>
+          <columns>
+            <column width="25%">
+              <sections>
+                <section name="ColorStrip" showlabel="false" showbar="false" columns="1" IsUserDefined="0" id="{c18c7ba8-bfd2-4a5f-afb9-463546488f24}">
+                  <labels>
+                    <label description="ColorStrip" languagecode="1028" />
+                  </labels>
+                </section>
+              </sections>
+            </column>
+            <column width="75%">
+              <sections>
+                <section name="CardHeader" showlabel="false" showbar="false" columns="111" id="{dd4fb600-173b-4dda-a257-45f18e5deaf6}" IsUserDefined="0">
+                  <labels>
+                    <label description="頁首" languagecode="1028" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{bf36033e-846e-4ef1-bb77-4f99d302b387}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="狀態原因" languagecode="1028" />
+                        </labels>
+                        <control id="statuscode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="statuscode" disabled="false" />
+                      </cell>
+                      <cell id="{1cd604c1-ea8b-49e9-b8c4-a41dddd31c7b}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                      </cell>
+                      <cell id="{60887a77-bfc1-4c83-b73f-1e69d65ab2d7}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="CardDetails" showlabel="false" showbar="false" columns="1" id="{84574882-608e-448a-9683-97bcc14ee145}" IsUserDefined="0">
+                  <labels>
+                    <label description="詳細資料" languagecode="1028" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{151c7438-3a1e-425b-88d1-40f1b787f940}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Name" languagecode="1028" />
+                        </labels>
+                        <control id="art_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="art_name" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="CardFooter" showlabel="false" columns="1111" showbar="false" id="{e3db40bd-01c9-4063-8136-bb77b9ec9a2e}" IsUserDefined="0">
+                  <labels>
+                    <label description="頁尾​​" languagecode="1028" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{083988ce-e8e4-4fa3-af23-00f65ee31ae2}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="負責人" languagecode="1028" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                      </cell>
+                      <cell id="{0baaf7ba-3a5e-494a-a2fa-c94ad95da6db}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="建立時間" languagecode="1028" />
+                        </labels>
+                        <control id="createdon" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="createdon" disabled="false" />
+                      </cell>
+                      <cell id="{42f6ccef-c0ca-4616-a779-0dd1893b93ed}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                      </cell>
+                      <cell id="{368e3c02-4a7c-47d7-ae61-55440db2a687}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1028" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="資訊" languagecode="1028" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="此實體的卡片表單。" languagecode="1028" />
+    </Descriptions>
+  </systemform>
+</forms>
