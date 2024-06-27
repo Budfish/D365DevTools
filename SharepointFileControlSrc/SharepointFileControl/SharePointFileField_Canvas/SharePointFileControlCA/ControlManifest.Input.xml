@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="ArtsolutionCustomization" constructor="SharePointFileControlCA" version="0.0.1" display-name-key="SharePointFileControlCA" description-key="SharePointFileControlCA description" control-type="virtual" >
+  <control namespace="ArtsolutionCustomization" constructor="SharePointFileControlCA" version="0.0.2" display-name-key="SharePointFileControlCA" description-key="SharePointFileControlCA description" control-type="virtual">
     <external-service-usage enabled="false">
     </external-service-usage>
     <property name="fullPath" display-name-key="檔案路徑" description-key="選擇用於存放檔案路徑的欄位。" of-type="SingleLine.Text" usage="bound" required="true" />

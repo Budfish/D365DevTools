@@ -13,7 +13,7 @@ namespace SharepointFileControlPlugins.Plugins
 {
     public class RefreshSharepointTokenPlugin : IPlugin
     {
-        private bool debug = false;
+        private bool debug = true;
         private IPluginExecutionContext context;
         private IOrganizationService service;
         private ITracingService tracer;
