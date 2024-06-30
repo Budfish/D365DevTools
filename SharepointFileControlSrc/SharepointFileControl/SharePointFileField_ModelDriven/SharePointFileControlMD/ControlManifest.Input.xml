@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+  <control namespace="ArtsolutionCustomization" constructor="SharePointFileControlMD" version="0.0.2" display-name-key="SharePointFileControlMD" description-key="SharePointFileControlMD description" control-type="virtual">
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    <property name="fileName" display-name-key="檔案路徑" description-key="選擇用於存放檔案路徑的欄位。" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="lookupParent" display-name-key="主記錄" description-key="(選用)選擇關聯的主記錄。" of-type-group="NullableLookup" usage="bound" required="false" />
+    <property name="duplicateDetect" display-name-key="重覆檢驗欄位" description-key="(選用)選擇檢驗檔案名稱是否重覆的欄位。" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="acceptType" display-name-key="檔案類型" description-key="(選用)限制上傳檔案的類型。" of-type="SingleLine.Text" usage="input" required="false" />
+    <type-group name="NullableLookup">
+      <type>Lookup.Simple</type>
+      <type>SingleLine.Text</type>
+    </type-group>
+    <resources>
+      <code path="index.ts" order="1" />
+      <css path="css/style.css" order="1" />
+      <platform-library name="React" version="16.8.6" />
+      <platform-library name="Fluent" version="8.29.0" />
+    </resources>
+    <!-- <feature-usage>
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage> -->
+  </control>
+</manifest>

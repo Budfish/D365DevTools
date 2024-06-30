@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="SharepointFileControlPlugins.Plugins.RefreshSharepointTokenPlugin: Update of art_sharepointtoken" SdkMessageProcessingStepId="{79e2d682-991d-ef11-840a-6045bd1feb6a}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>20bebb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeName>SharepointFileControlPlugins.Plugins.RefreshSharepointTokenPlugin, SharepointFileControlPlugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=765dca5fa5568032</PluginTypeName>
+  <PluginTypeId>cf0d1b80-54cd-4a38-aa25-b6185112d635</PluginTypeId>
+  <PrimaryEntity>art_sharepointtoken</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>SharepointFileControlPlugins.Plugins.RefreshSharepointTokenPlugin: Update of art_sharepointtoken</Description>
+  <FilteringAttributes>art_refreshtime</FilteringAttributes>
+  <InvocationSource>0</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>1</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>10</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>
