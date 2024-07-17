@@ -27,6 +27,7 @@ art.ExceptionHandler = {
         const request = new this.LogRequest(params);
         const data = await Xrm.WebApi.online.execute(request).then((data) => data.json()).catch(err => err);
     },
+
     LogRequest: class {
         constructor(params = {}) {
             this.EntityLogicalName = params.EntityLogicalName;
@@ -60,4 +61,16 @@ art.ExceptionHandler = {
             }
         }
     },
+
+    clear: async function (entityLogicalName, recordId) {
+        // call Action: art_ClearException
+        // input - entityLogicalName (string)
+        // input - recordId (string)
+        // Logic - 找到art_exceptionlog中所有關聯到指定記錄的record, 全部設定為not show.
+
+    },
+
+    ClearRequest: class {
+
+    }
 }
