@@ -10,7 +10,7 @@ art.WebResource = {
             window.formContext = formContext;
             return true;
         })
-        if (!registered) setTimeout(() => { this.setupFormContext(executionContext, webResourceName) }, 100);
+        if (!registered) setTimeout(() => { this.setupFormContext(formContext, webResourceName) }, 100);
     },
     requestSetupXrm: function (formContext, webResourceName) {
         this.setupXrm(formContext, webResourceName);
@@ -22,7 +22,7 @@ art.WebResource = {
             window.Xrm = Xrm;
             return true;
         })
-        if (!registered) setTimeout(() => { this.setupXrm(executionContext, webResourceName) }, 100);
+        if (!registered) setTimeout(() => { this.setupXrm(formContext, webResourceName) }, 100);
     },
     registerCrmsdkOnload: function (callback, sdkNames = ['formContext', 'Xrm']) {
         if (!Array.isArray(sdkNames)) sdkNames = [sdkNames];
